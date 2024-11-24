@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CoffeeShopManagement.Manager" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.frmLogin" Collapsed="true">
+    <Position X="4.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAQAEICAAAAAAAACAAAAiAMAAKAAAAgQAAABAAAA=</HashCode>
+      <FileName>frmLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.CustomerInfo" Collapsed="true">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>Customer.cs</FileName>
+      <NewMemberFileName>Manager.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.Program" Collapsed="true">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.PersonInfo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAEQCAQBEAAEAAAAQCAAAEAgAAAAA=</HashCode>
+      <FileName>PersonInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.Properties.Resources" Collapsed="true">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.Properties.Settings" Collapsed="true">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAIAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.UsersTableDataContext" Collapsed="true">
+    <Position X="9" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAEAAAAAAEAASAAAAAAAAgAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.User" Collapsed="true">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAwAgIBAAAAAOEAUQMkUAAViSCAQAACIAAUEAAAAIA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CoffeeShopManagement.frmBaristaInfo" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>frmBaristaInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.frmBaristaList" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgAAAACACEgAJQAEQCAQAACAAAIQAACNDAEAAIEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.frmCustomerInfo" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>frmCustomerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.frmInventory" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>frmInventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.frmManagerInfo" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAACAgAGAAEBAAEQCEAwECAEAoACAAAGAAJABIAAE=</HashCode>
+      <FileName>frmManagerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.Person" Collapsed="true">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgIAAAACAQAgAAEAIAAACAAAAAgAAAgA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.Barista" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Barista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeShopManagement.CoffeeShopDBDataContext" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAQIAAAAIBAAAAAAACCAAAAEIAAgAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
