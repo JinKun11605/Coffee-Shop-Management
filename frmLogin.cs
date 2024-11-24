@@ -90,5 +90,11 @@ namespace CoffeeShopManagement
             }
 
         }
+
+        private void btnGuest_Click(object sender, EventArgs e)
+        {
+            frmMenu frm = new frmMenu("GUEST");
+            frm.Show();
+        }
     }
 }
