@@ -15,9 +15,9 @@ namespace CoffeeShopManagement
         public frmMenu(string custemerID)
         {
             InitializeComponent();
-            lblCustemerID.Text += custemerID;
-            RegisterComboBoxEvents();
             CustemerID = custemerID;
+            lblCustomerID.Text += CustemerID;
+            RegisterComboBoxEvents();
 
         }
 
@@ -37,7 +37,31 @@ namespace CoffeeShopManagement
 
             priceCheckBox.Text = adjustedPrice.ToString("N0") + " VND";
         }
-
+        private double discount(string CustomerID)
+        {
+            var customers = context.Customers.FirstOrDefault(c => c.CustomerID == CustomerID);
+            if (customers.CustomerLevel == "Kim Cương")
+            {
+                return 0.1;
+            }
+            else if (customers.CustomerLevel == "Bạch Kim")
+            {
+                return 0.07;
+            }
+            else if (customers.CustomerLevel == "Vàng")
+            {
+                return 0.05;
+            }
+            else if (customers.CustomerLevel == "bạc")
+            {
+                return 0.03;
+            }
+            else if (customers.CustomerLevel == "Đồng")
+            {
+                return 0;
+            }
+            return 0;
+        }
         private OrderDetails GetItem(PictureBox pictureBox, CheckBox priceCheckBox, ComboBox sizeComboBox, NumericUpDown quantityUpDown, string name, decimal basePrice)
         {
             if (priceCheckBox != null && priceCheckBox.Checked)
@@ -66,9 +90,10 @@ namespace CoffeeShopManagement
 
                     ProductName = name,
                     Quantity = (int)quantityUpDown.Value,
-                    Price = adjustedPrice,
+                    Price = adjustedPrice * (1 - (decimal)discount(CustemerID)),
                     Size = sizeComboBox.SelectedItem.ToString(),
                     ProductID = pictureBox.Name + sizeComboBox.SelectedItem.ToString(),
+                    Discount = discount(CustemerID)
                 };
             }
             return null;
