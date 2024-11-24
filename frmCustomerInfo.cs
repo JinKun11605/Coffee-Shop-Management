@@ -26,7 +26,7 @@ namespace CoffeeShopManagement
             var customer = db.Customers.FirstOrDefault(c=> c.CustomerID == CustomerID);
 
             lblShowFullName.Text = customer.FullName;
-            lblShowBirthDay.Text = customer.BirthDay.ToString();// ToString("dd/MM/yyyy");
+            lblShowBirthDay.Text = customer.BirthDay.ToString("dd/MM/yyyy");
             lblShowPhoneNumber.Text = customer.PhoneNumber;
             lblShowID.Text = customer.CustomerID;
             lblShowPassword.Text = customer.Password;
