@@ -28,6 +28,7 @@ namespace CoffeeShopManagement
         public frmBaristaMixing(string baristaID)
         {
             InitializeComponent();
+            LoadData();
             BaristaID = baristaID;
             lblBaristaID.Text += BaristaID;
             Items = new List<Tuple<CheckBox, ComboBox, NumericUpDown>>
@@ -301,15 +302,6 @@ namespace CoffeeShopManagement
             {
                 MessageBox.Show("Đã xảy ra lỗi khi lưu thay đổi: " + ex.Message);
             }
-        }
-
-        private void frmBaristaMixing_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'coffeeShop_DBDataSet.Inventory' table. You can move, or remove it, as needed.
-            this.inventoryTableAdapter.Fill(this.coffeeShop_DBDataSet.Inventory);
-            // TODO: This line of code loads data into the 'coffeeShop_DBDataSet.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.coffeeShop_DBDataSet.Products);
-
         }
 
         private void btnReload_Click(object sender, EventArgs e)

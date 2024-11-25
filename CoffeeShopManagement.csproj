@@ -33,9 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,7 +73,7 @@
       <DependentUpon>frmBaristaInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBaristaList.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmBaristaList.Designer.cs">
       <DependentUpon>frmBaristaList.cs</DependentUpon>
@@ -91,13 +97,13 @@
       <DependentUpon>frmCustomerInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCustomerList.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmCustomerList.Designer.cs">
       <DependentUpon>frmCustomerList.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInventory.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmInventory.Designer.cs">
       <DependentUpon>frmInventory.cs</DependentUpon>
@@ -108,8 +114,20 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManagerInfo.cs">
+    <Compile Include="frmManager.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManager.Designer.cs">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManagerDashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmManagerDashBoard.Designer.cs">
+      <DependentUpon>frmManagerDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManagerInfo.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmManagerInfo.Designer.cs">
       <DependentUpon>frmManagerInfo.cs</DependentUpon>
@@ -152,6 +170,12 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmManager.resx">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManagerDashBoard.resx">
+      <DependentUpon>frmManagerDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmManagerInfo.resx">
       <DependentUpon>frmManagerInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +212,7 @@
     <None Include="CoffeeShop_DBDataSet.xss">
       <DependentUpon>CoffeeShop_DBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CoffeeShopManagement
 {
-    public partial class frmManagerInfo : Form
+    public partial class frmManagerInfo : UserControl
     {
         private string managerID;
 

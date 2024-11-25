@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CoffeeShopManagement
 {
-    public partial class frmInventory : Form
+    public partial class frmInventory : UserControl
     {
         CoffeeShopDBDataContext context = new CoffeeShopDBDataContext();
 
@@ -19,6 +19,7 @@ namespace CoffeeShopManagement
         public frmInventory()
         {
             InitializeComponent();
+            LoadData();
             Items = new List<Tuple<CheckBox, NumericUpDown>>
             {
                 Tuple.Create(ID001, quantityID001),
@@ -77,13 +78,7 @@ namespace CoffeeShopManagement
         }
 
 
-        private void frmInventory_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'coffeeShop_DBDataSet2.Inventory' table. You can move, or remove it, as needed.
-            this.inventoryTableAdapter.Fill(this.coffeeShop_DBDataSet.Inventory);
-
-        }
-
+       
         private void btnReLoad_Click(object sender, EventArgs e)
         {
             LoadData();

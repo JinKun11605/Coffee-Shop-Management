@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace CoffeeShopManagement
 {
-    public partial class frmBaristaList : Form
+    public partial class frmBaristaList : UserControl
     {
         public frmBaristaList()
         {

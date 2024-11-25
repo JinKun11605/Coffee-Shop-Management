@@ -16,6 +16,7 @@ namespace CoffeeShopManagement
         {
             InitializeComponent();
             CustemerID = custemerID;
+            LoadData();
             lblCustomerID.Text += CustemerID;
             RegisterComboBoxEvents();
 
@@ -195,12 +196,7 @@ namespace CoffeeShopManagement
             sizematcha.SelectedIndexChanged += (s, e) => UpdatePriceDisplay(pricematcha, sizematcha, 35000);
         }
 
-        private void frmMenu_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'coffeeShop_DBDataSet.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.coffeeShop_DBDataSet.Products);
-
-        }
+    
         private void btnReLoad_Click(object sender, EventArgs e)
         {
             LoadData();

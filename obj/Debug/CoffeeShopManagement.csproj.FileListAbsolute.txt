@@ -71,3 +71,7 @@ S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.csproj.GenerateReso
 S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.csproj.CoreCompileInputs.cache
 S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.exe
 S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.pdb
+S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.frmManager.resources
+S:\OOP\Coffee-Shop-Management\bin\Debug\Guna.UI2.dll
+S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.frmManagerDashBoard.resources
+S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeSh.AD010B53.Up2Date

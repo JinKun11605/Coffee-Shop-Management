@@ -11,7 +11,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace CoffeeShopManagement
 {
-    public partial class frmCustomerList : Form
+    public partial class frmCustomerList : UserControl
     {
         public frmCustomerList()
         {

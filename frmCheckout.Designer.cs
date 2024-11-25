@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblCustemerID = new System.Windows.Forms.Label();
             this.btnSendFeedback = new System.Windows.Forms.Button();
             this.btnconfirm = new System.Windows.Forms.Button();
@@ -41,29 +40,12 @@
             this.Star3 = new System.Windows.Forms.PictureBox();
             this.Star2 = new System.Windows.Forms.PictureBox();
             this.Star1 = new System.Windows.Forms.PictureBox();
-            this.orderDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.appcDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderDetailsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.coffeeShop_DBDataSet = new CoffeeShopManagement.CoffeeShop_DBDataSet();
-            this.orderDetailsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.orderDetailsTableAdapter = new CoffeeShopManagement.CoffeeShop_DBDataSetTableAdapters.OrderDetailsTableAdapter();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.discountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Star5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Star4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Star3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Star2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Star1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDetailsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appcDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDetailsBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coffeeShop_DBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDetailsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCustemerID
@@ -123,16 +105,7 @@
             // 
             this.dataGridViewBill.AllowUserToAddRows = false;
             this.dataGridViewBill.AllowUserToDeleteRows = false;
-            this.dataGridViewBill.AutoGenerateColumns = false;
             this.dataGridViewBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.productIDDataGridViewTextBoxColumn,
-            this.productNameDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn,
-            this.discountDataGridViewTextBoxColumn,
-            this.sizeDataGridViewTextBoxColumn});
-            this.dataGridViewBill.DataSource = this.orderDetailsBindingSource1;
             this.dataGridViewBill.Location = new System.Drawing.Point(433, 241);
             this.dataGridViewBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewBill.Name = "dataGridViewBill";
@@ -213,78 +186,6 @@
             this.Star1.TabIndex = 17;
             this.Star1.TabStop = false;
             // 
-            // orderDetailsBindingSource
-            // 
-            this.orderDetailsBindingSource.DataMember = "OrderDetails";
-            // 
-            // coffeeShop_DBDataSet
-            // 
-            this.coffeeShop_DBDataSet.DataSetName = "CoffeeShop_DBDataSet";
-            this.coffeeShop_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // orderDetailsBindingSource1
-            // 
-            this.orderDetailsBindingSource1.DataMember = "OrderDetails";
-            this.orderDetailsBindingSource1.DataSource = this.coffeeShop_DBDataSet;
-            // 
-            // orderDetailsTableAdapter
-            // 
-            this.orderDetailsTableAdapter.ClearBeforeFill = true;
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.priceDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantityDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // discountDataGridViewTextBoxColumn
-            // 
-            this.discountDataGridViewTextBoxColumn.DataPropertyName = "Discount";
-            this.discountDataGridViewTextBoxColumn.HeaderText = "Discount";
-            this.discountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.discountDataGridViewTextBoxColumn.Name = "discountDataGridViewTextBoxColumn";
-            this.discountDataGridViewTextBoxColumn.ReadOnly = true;
-            this.discountDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sizeDataGridViewTextBoxColumn
-            // 
-            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
-            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
-            this.sizeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
-            this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sizeDataGridViewTextBoxColumn.Width = 125;
-            // 
             // frmCheckout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -312,41 +213,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.Star3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Star2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Star1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDetailsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appcDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDetailsBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coffeeShop_DBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDetailsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource appcDataSetBindingSource;
-        private System.Windows.Forms.BindingSource orderDetailsBindingSource3;
         private System.Windows.Forms.Label lblCustemerID;
         private System.Windows.Forms.PictureBox Star5;
         private System.Windows.Forms.PictureBox Star4;
         private System.Windows.Forms.PictureBox Star3;
         private System.Windows.Forms.PictureBox Star2;
         private System.Windows.Forms.PictureBox Star1;
-        private System.Windows.Forms.BindingSource orderDetailsBindingSource;
         private System.Windows.Forms.Button btnSendFeedback;
         private System.Windows.Forms.Button btnconfirm;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFeedback;
         private System.Windows.Forms.DataGridView dataGridViewBill;
         private System.Windows.Forms.Label label1;
-        private CoffeeShop_DBDataSet coffeeShop_DBDataSet;
-        private System.Windows.Forms.BindingSource orderDetailsBindingSource1;
-        private CoffeeShop_DBDataSetTableAdapters.OrderDetailsTableAdapter orderDetailsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn discountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
     }
 }
