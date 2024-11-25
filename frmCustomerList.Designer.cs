@@ -392,7 +392,6 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmCustomerList";
             this.Text = "DANH SÁCH KHÁCH HÀNG";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCustomerList_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

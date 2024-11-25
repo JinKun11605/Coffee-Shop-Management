@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventory));
             this.picID002 = new System.Windows.Forms.PictureBox();
             this.ID012 = new System.Windows.Forms.CheckBox();
@@ -72,12 +71,6 @@
             this.ID001 = new System.Windows.Forms.CheckBox();
             this.quantityID001 = new System.Windows.Forms.NumericUpDown();
             this.ID005 = new System.Windows.Forms.CheckBox();
-            this.coffeeShop_DBDataSet = new CoffeeShopManagement.CoffeeShop_DBDataSet();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.inventoryTableAdapter = new CoffeeShopManagement.CoffeeShop_DBDataSetTableAdapters.InventoryTableAdapter();
-            this.ingredientIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ingredientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picID002)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityID012)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityID008)).BeginInit();
@@ -105,8 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.quantityID003)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityID002)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityID001)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coffeeShop_DBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // picID002
@@ -334,14 +325,8 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ingredientIDDataGridViewTextBoxColumn,
-            this.ingredientNameDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.inventoryBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(1185, 72);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -628,44 +613,6 @@
             this.ID005.Text = "Thêm ";
             this.ID005.UseVisualStyleBackColor = true;
             // 
-            // coffeeShop_DBDataSet
-            // 
-            this.coffeeShop_DBDataSet.DataSetName = "CoffeeShop_DBDataSet";
-            this.coffeeShop_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataMember = "Inventory";
-            this.inventoryBindingSource.DataSource = this.coffeeShop_DBDataSet;
-            // 
-            // inventoryTableAdapter
-            // 
-            this.inventoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // ingredientIDDataGridViewTextBoxColumn
-            // 
-            this.ingredientIDDataGridViewTextBoxColumn.DataPropertyName = "IngredientID";
-            this.ingredientIDDataGridViewTextBoxColumn.HeaderText = "IngredientID";
-            this.ingredientIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ingredientIDDataGridViewTextBoxColumn.Name = "ingredientIDDataGridViewTextBoxColumn";
-            this.ingredientIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ingredientNameDataGridViewTextBoxColumn
-            // 
-            this.ingredientNameDataGridViewTextBoxColumn.DataPropertyName = "IngredientName";
-            this.ingredientNameDataGridViewTextBoxColumn.HeaderText = "IngredientName";
-            this.ingredientNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ingredientNameDataGridViewTextBoxColumn.Name = "ingredientNameDataGridViewTextBoxColumn";
-            this.ingredientNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.Width = 125;
-            // 
             // frmInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -713,10 +660,9 @@
             this.Controls.Add(this.ID001);
             this.Controls.Add(this.quantityID001);
             this.Controls.Add(this.ID005);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInventory";
             this.Text = "frmInventory";
-            this.Load += new System.EventHandler(this.frmInventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picID002)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityID012)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityID008)).EndInit();
@@ -744,8 +690,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.quantityID003)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityID002)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityID001)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coffeeShop_DBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -795,11 +739,5 @@
         private System.Windows.Forms.CheckBox ID001;
         private System.Windows.Forms.NumericUpDown quantityID001;
         private System.Windows.Forms.CheckBox ID005;
-        private CoffeeShop_DBDataSet coffeeShop_DBDataSet;
-        private System.Windows.Forms.BindingSource inventoryBindingSource;
-        private CoffeeShop_DBDataSetTableAdapters.InventoryTableAdapter inventoryTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ingredientIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ingredientNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
     }
 }

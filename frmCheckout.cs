@@ -40,8 +40,6 @@ namespace CoffeeShopManagement
         }
         private void frmCheckout_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'coffeeShop_DBDataSet1.OrderDetails' table. You can move, or remove it, as needed.
-            this.orderDetailsTableAdapter.Fill(this.coffeeShop_DBDataSet.OrderDetails);
             decimal totalAmount = CalculateTotal();
             btnconfirm.Text = $"{totalAmount.ToString("N0")} VND";
             SetupPictureBoxes();
