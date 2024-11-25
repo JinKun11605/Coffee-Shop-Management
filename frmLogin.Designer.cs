@@ -36,6 +36,7 @@
             this.radioBarista = new System.Windows.Forms.RadioButton();
             this.txtID = new System.Windows.Forms.TextBox();
             this.radioCustomer = new System.Windows.Forms.RadioButton();
+            this.btnGuest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPassword
@@ -43,7 +44,7 @@
             this.txtPassword.Location = new System.Drawing.Point(343, 218);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(148, 27);
+            this.txtPassword.Size = new System.Drawing.Size(148, 29);
             this.txtPassword.TabIndex = 0;
             // 
             // btnLogin
@@ -63,7 +64,7 @@
             this.lblUsername.Location = new System.Drawing.Point(203, 169);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(90, 19);
+            this.lblUsername.Size = new System.Drawing.Size(93, 24);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "Tài khoản";
             // 
@@ -73,7 +74,7 @@
             this.lblPassword.Location = new System.Drawing.Point(203, 218);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(81, 19);
+            this.lblPassword.Size = new System.Drawing.Size(86, 24);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Mật khẩu";
             // 
@@ -83,7 +84,7 @@
             this.radioManager.Location = new System.Drawing.Point(125, 98);
             this.radioManager.Margin = new System.Windows.Forms.Padding(4);
             this.radioManager.Name = "radioManager";
-            this.radioManager.Size = new System.Drawing.Size(90, 23);
+            this.radioManager.Size = new System.Drawing.Size(96, 28);
             this.radioManager.TabIndex = 5;
             this.radioManager.TabStop = true;
             this.radioManager.Text = "Quản lý";
@@ -95,7 +96,7 @@
             this.radioBarista.Location = new System.Drawing.Point(311, 98);
             this.radioBarista.Margin = new System.Windows.Forms.Padding(4);
             this.radioBarista.Name = "radioBarista";
-            this.radioBarista.Size = new System.Drawing.Size(180, 23);
+            this.radioBarista.Size = new System.Drawing.Size(192, 28);
             this.radioBarista.TabIndex = 6;
             this.radioBarista.TabStop = true;
             this.radioBarista.Text = "Nhân viên Pha chế";
@@ -106,7 +107,7 @@
             this.txtID.Location = new System.Drawing.Point(343, 161);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(148, 27);
+            this.txtID.Size = new System.Drawing.Size(148, 29);
             this.txtID.TabIndex = 8;
             // 
             // radioCustomer
@@ -114,17 +115,29 @@
             this.radioCustomer.AutoSize = true;
             this.radioCustomer.Location = new System.Drawing.Point(585, 98);
             this.radioCustomer.Name = "radioCustomer";
-            this.radioCustomer.Size = new System.Drawing.Size(117, 23);
+            this.radioCustomer.Size = new System.Drawing.Size(133, 28);
             this.radioCustomer.TabIndex = 10;
             this.radioCustomer.TabStop = true;
             this.radioCustomer.Text = "Khách hàng";
             this.radioCustomer.UseVisualStyleBackColor = true;
             // 
+            // btnGuest
+            // 
+            this.btnGuest.Location = new System.Drawing.Point(672, 369);
+            this.btnGuest.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuest.Name = "btnGuest";
+            this.btnGuest.Size = new System.Drawing.Size(112, 34);
+            this.btnGuest.TabIndex = 11;
+            this.btnGuest.Text = "Khách";
+            this.btnGuest.UseVisualStyleBackColor = true;
+            this.btnGuest.Click += new System.EventHandler(this.btnGuest_Click);
+            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 416);
+            this.Controls.Add(this.btnGuest);
             this.Controls.Add(this.radioCustomer);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.radioBarista);
@@ -133,9 +146,10 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
-            this.Font = new System.Drawing.Font("JetBrains Mono NL", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -153,6 +167,7 @@
         private System.Windows.Forms.RadioButton radioBarista;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.RadioButton radioCustomer;
+        private System.Windows.Forms.Button btnGuest;
     }
 }
 

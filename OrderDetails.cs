@@ -14,12 +14,13 @@ namespace ProjectOOP
         private decimal price;
         private int quantity;
         private string size;
-
+        private double discount;
         public string ProductID { get => productID; set => productID = value; }
         public string ProductName { get => productName; set => productName = value; }
         public decimal Price { get => price; set => price = value; }
         public int Quantity { get => quantity; set => quantity = value; }
 
         public string Size { get => size; set => size = value; }
+        public double Discount { get => discount; set => discount = value; }
     }
 }

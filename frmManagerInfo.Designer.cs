@@ -66,7 +66,6 @@
             this.pictureManager.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureManager.TabIndex = 0;
             this.pictureManager.TabStop = false;
-            //this.pictureManager.Click += new System.EventHandler(this.pictureManager_Click);
             // 
             // label1
             // 
@@ -324,7 +323,7 @@
             this.Font = new System.Drawing.Font("JetBrains Mono NL", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmManagerInfo";
-            this.Text = "Thông tin Quản lý";
+            this.Text = "THÔNG TIN QUẢN LÝ";
             this.Load += new System.EventHandler(this.frmManagerInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureManager)).EndInit();
             this.groupBox1.ResumeLayout(false);

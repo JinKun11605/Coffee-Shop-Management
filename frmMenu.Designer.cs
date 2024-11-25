@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.btnReLoad = new System.Windows.Forms.Button();
-            this.lblCustemerID = new System.Windows.Forms.Label();
+            this.lblCustomerID = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,16 +138,16 @@
             this.btnReLoad.UseVisualStyleBackColor = true;
             this.btnReLoad.Click += new System.EventHandler(this.btnReLoad_Click);
             // 
-            // lblCustemerID
+            // lblCustomerID
             // 
-            this.lblCustemerID.AutoSize = true;
-            this.lblCustemerID.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblCustemerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustemerID.Location = new System.Drawing.Point(18, -58);
-            this.lblCustemerID.Name = "lblCustemerID";
-            this.lblCustemerID.Size = new System.Drawing.Size(140, 26);
-            this.lblCustemerID.TabIndex = 153;
-            this.lblCustemerID.Text = "Khách hàng: ";
+            this.lblCustomerID.AutoSize = true;
+            this.lblCustomerID.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerID.Location = new System.Drawing.Point(12, 9);
+            this.lblCustomerID.Name = "lblCustomerID";
+            this.lblCustomerID.Size = new System.Drawing.Size(140, 26);
+            this.lblCustomerID.TabIndex = 153;
+            this.lblCustomerID.Text = "Khách hàng: ";
             // 
             // dataGridView1
             // 
@@ -847,7 +847,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 753);
             this.Controls.Add(this.btnReLoad);
-            this.Controls.Add(this.lblCustemerID);
+            this.Controls.Add(this.lblCustomerID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.DRK0010);
@@ -946,7 +946,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnReLoad;
-        private System.Windows.Forms.Label lblCustemerID;
+        private System.Windows.Forms.Label lblCustomerID;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.PictureBox DRK0010;
