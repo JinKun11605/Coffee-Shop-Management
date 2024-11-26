@@ -66,7 +66,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(27, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1482, 213);
+            this.panel1.Size = new System.Drawing.Size(1482, 234);
             this.panel1.TabIndex = 0;
             // 
             // panel6
@@ -75,9 +75,9 @@
             this.panel6.Controls.Add(this.lblTotalIncome);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(1141, 21);
+            this.panel6.Location = new System.Drawing.Point(1164, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(314, 176);
+            this.panel6.Size = new System.Drawing.Size(314, 194);
             this.panel6.TabIndex = 1;
             // 
             // lblTotalIncome
@@ -104,7 +104,7 @@
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(29, 21);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 136);
+            this.pictureBox4.Size = new System.Drawing.Size(100, 157);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
@@ -115,9 +115,9 @@
             this.panel5.Controls.Add(this.lblTodayIncome);
             this.panel5.Controls.Add(this.lable4);
             this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(769, 21);
+            this.panel5.Location = new System.Drawing.Point(777, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(314, 176);
+            this.panel5.Size = new System.Drawing.Size(314, 194);
             this.panel5.TabIndex = 1;
             // 
             // lblTodayIncome
@@ -144,7 +144,7 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(26, 21);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 136);
+            this.pictureBox3.Size = new System.Drawing.Size(100, 157);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -155,9 +155,9 @@
             this.panel4.Controls.Add(this.lbltotalBar);
             this.panel4.Controls.Add(this.lablel9);
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(397, 21);
+            this.panel4.Location = new System.Drawing.Point(390, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(314, 176);
+            this.panel4.Size = new System.Drawing.Size(314, 194);
             this.panel4.TabIndex = 1;
             // 
             // lbltotalBar
@@ -185,7 +185,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(30, 21);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 136);
+            this.pictureBox2.Size = new System.Drawing.Size(100, 157);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -196,9 +196,9 @@
             this.panel3.Controls.Add(this.lblTotalcus);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(25, 21);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(314, 176);
+            this.panel3.Size = new System.Drawing.Size(314, 194);
             this.panel3.TabIndex = 0;
             // 
             // lblTotalcus
@@ -226,13 +226,14 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(28, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 136);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 157);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Location = new System.Drawing.Point(27, 239);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1482, 426);

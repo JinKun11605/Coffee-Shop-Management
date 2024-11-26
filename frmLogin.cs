@@ -40,7 +40,7 @@ namespace CoffeeShopManagement
         {
             if (role == "Manager")
             {
-                var formManager = new frmManagerInfo(id);
+                var formManager = new frmManager(id);
                 formManager.Show();
             }
             else if (role == "Barista")

@@ -12,9 +12,15 @@ namespace CoffeeShopManagement
 {
     public partial class frmManager : Form
     {
-        public frmManager()
+        private string id;
+        public frmManager(string ID)
         {
             InitializeComponent();
+            this.id = ID;
+            pnMain.Controls.Clear();
+            frmManagerInfo frm = new frmManagerInfo(id);
+            frm.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(frm);
         }
 
         private void btnInfo_Click(object sender, EventArgs e)
