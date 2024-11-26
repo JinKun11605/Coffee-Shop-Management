@@ -83,7 +83,7 @@ namespace CoffeeShopManagement
         {
             if (role == "Manager")
             {
-                var formManager = new frmManagerInfo(id);
+                var formManager = new frmManager(id);
                 formManager.Show();
             }
             else if (role == "Barista")
@@ -131,7 +131,7 @@ namespace CoffeeShopManagement
             {
                 MessageBox.Show("Đăng nhập thất bại, kiểm tra lại Tên đăng nhập hoặc Mật khẩu!");
             }
-
+            this.Hide();
         }
 
         private void piutureGuest_Click(object sender, EventArgs e)

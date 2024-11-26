@@ -12,15 +12,23 @@ namespace CoffeeShopManagement
 {
     public partial class frmManager : Form
     {
-        public frmManager()
+        private string managerID;
+        public frmManager(string MananegerID)
         {
             InitializeComponent();
+            managerID = MananegerID;
+            pnMain.Controls.Clear();
+            frmManagerDashBoard frm = new frmManagerDashBoard();
+            frm.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(frm);
+
+
         }
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
             pnMain.Controls.Clear();
-            frmManagerInfo frm = new frmManagerInfo("m1");
+            frmManagerInfo frm = new frmManagerInfo(managerID);
             frm.Dock = DockStyle.Fill;
             pnMain.Controls.Add(frm);
         }
@@ -56,6 +64,13 @@ namespace CoffeeShopManagement
             frmManagerDashBoard frm = new frmManagerDashBoard();
             frm.Dock = DockStyle.Fill;
             pnMain.Controls.Add(frm);
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Close();
         }
     }
 }
