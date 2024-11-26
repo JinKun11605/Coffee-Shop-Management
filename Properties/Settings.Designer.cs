@@ -88,5 +88,16 @@ namespace CoffeeShopManagement.Properties {
                 return ((string)(this["DataSourceConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-PDVQFLV;Initial Catalog=CoffeeShopDB;Integrated Security=True" +
+            ";Connect Timeout=30;Encrypt=True;TrustServerCertificate=True")]
+        public string CoffeeShopDBConnectionString {
+            get {
+                return ((string)(this["CoffeeShopDBConnectionString"]));
+            }
+        }
     }
 }

@@ -78,7 +78,7 @@ namespace CoffeeShopManagement
 
         private void btnReportSales_Click(object sender, EventArgs e)
         {
-
+            
         }
 
     }

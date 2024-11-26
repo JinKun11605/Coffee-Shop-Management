@@ -22,7 +22,7 @@ namespace CoffeeShopManagement
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="CoffeeShop_DB")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="CoffeeShopDB")]
 	public partial class CoffeeShopDBDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -51,7 +51,7 @@ namespace CoffeeShopManagement
     #endregion
 		
 		public CoffeeShopDBDataContext() : 
-				base(global::CoffeeShopManagement.Properties.Settings.Default.CoffeeShop_DBConnectionString1, mappingSource)
+				base(global::CoffeeShopManagement.Properties.Settings.Default.CoffeeShopDBConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

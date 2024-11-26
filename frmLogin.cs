@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Guna.UI2.WinForms;
 
 namespace CoffeeShopManagement
 {
@@ -19,8 +21,49 @@ namespace CoffeeShopManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            radioManager.CheckedChanged += RadioButton_CheckedChanged;
+            radioBarista.CheckedChanged += RadioButton_CheckedChanged;
+            radioCustomer.CheckedChanged += RadioButton_CheckedChanged;
+
+            txtID.PlaceholderText = "Tài khoản";
+            txtID.PlaceholderForeColor = Color.Gray;
+            txtID.TextOffset = new Point(10, 0);
+
+
+            txtPassword.PlaceholderText = "Mật khẩu";
+            txtPassword.PlaceholderForeColor = Color.Gray;
+            txtPassword.PasswordChar = '●';
+            txtPassword.TextOffset = new Point(10, 0);
 
         }
+
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            string imagePath = "";
+
+            if (rb == radioManager)
+            {
+                imagePath = @"manager-icon.png";
+            }
+            else if (rb == radioBarista)
+            {
+                imagePath = @"barista-icon.png";
+            }
+            else if (rb == radioCustomer)
+            {
+                imagePath = @"customer-icon.png";
+            }
+            if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+            {
+                pictureOption.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                MessageBox.Show($"Không tìm thấy ảnh: {imagePath}");
+            }
+        }
+
 
         public bool IsAuthenticated(string id, string password, string role)
         {
@@ -91,10 +134,22 @@ namespace CoffeeShopManagement
 
         }
 
-        private void btnGuest_Click(object sender, EventArgs e)
+        private void piutureGuest_Click(object sender, EventArgs e)
         {
             frmMenu frm = new frmMenu("GUEST");
             frm.Show();
+        }
+
+        private void pictureEye_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '●')
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '●';
+            }
         }
     }
 }

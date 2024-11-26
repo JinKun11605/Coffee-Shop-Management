@@ -230,13 +230,18 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\barista-icon.png" />
     <Content Include="Resources\cafeden.jpg" />
     <Content Include="Resources\cafesua.jpg" />
+    <None Include="Resources\customer-icon.png" />
     <Content Include="Resources\duongden.jpg" />
     <Content Include="Resources\epcam.jpg" />
     <Content Include="Resources\epcarot.jpg" />
     <Content Include="Resources\epduahau.jpg" />
     <Content Include="Resources\epoi .jpg" />
+    <None Include="Resources\id-icon2.jpg" />
+    <None Include="Resources\guest1.png" />
+    <None Include="Resources\eye.png" />
     <Content Include="Resources\ID001.jpg" />
     <Content Include="Resources\ID002.jpg" />
     <Content Include="Resources\ID003.jpg" />
@@ -250,7 +255,10 @@
     <Content Include="Resources\ID011.jpg" />
     <Content Include="Resources\ID012.jpg" />
     <Content Include="Resources\ID013.jpg" />
+    <None Include="Resources\logo-shop2.png" />
+    <None Include="Resources\manager-icon.png" />
     <Content Include="Resources\matcha.jpg" />
+    <None Include="Resources\password.png" />
     <Content Include="Resources\sinhtobo.jpg" />
     <Content Include="Resources\sinhtodau.jpg" />
     <Content Include="Resources\star.jpg" />
