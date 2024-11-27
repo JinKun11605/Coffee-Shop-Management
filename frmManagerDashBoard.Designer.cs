@@ -64,9 +64,10 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(27, 20);
+            this.panel1.Location = new System.Drawing.Point(20, 16);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1482, 213);
+            this.panel1.Size = new System.Drawing.Size(1112, 173);
             this.panel1.TabIndex = 0;
             // 
             // panel6
@@ -75,36 +76,40 @@
             this.panel6.Controls.Add(this.lblTotalIncome);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(1141, 21);
+            this.panel6.Location = new System.Drawing.Point(856, 17);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(314, 176);
+            this.panel6.Size = new System.Drawing.Size(236, 143);
             this.panel6.TabIndex = 1;
             // 
             // lblTotalIncome
             // 
             this.lblTotalIncome.AutoSize = true;
-            this.lblTotalIncome.Location = new System.Drawing.Point(161, 141);
+            this.lblTotalIncome.Location = new System.Drawing.Point(121, 115);
+            this.lblTotalIncome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalIncome.Name = "lblTotalIncome";
             this.lblTotalIncome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTotalIncome.Size = new System.Drawing.Size(14, 16);
+            this.lblTotalIncome.Size = new System.Drawing.Size(13, 13);
             this.lblTotalIncome.TabIndex = 5;
             this.lblTotalIncome.Text = "0";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(161, 21);
+            this.label10.Location = new System.Drawing.Point(121, 17);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 16);
+            this.label10.Size = new System.Drawing.Size(68, 13);
             this.label10.TabIndex = 4;
             this.label10.Text = "Total income";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(29, 21);
+            this.pictureBox4.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 136);
+            this.pictureBox4.Size = new System.Drawing.Size(75, 110);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
@@ -115,17 +120,19 @@
             this.panel5.Controls.Add(this.lblTodayIncome);
             this.panel5.Controls.Add(this.lable4);
             this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(769, 21);
+            this.panel5.Location = new System.Drawing.Point(577, 17);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(314, 176);
+            this.panel5.Size = new System.Drawing.Size(236, 143);
             this.panel5.TabIndex = 1;
             // 
             // lblTodayIncome
             // 
             this.lblTodayIncome.AutoSize = true;
-            this.lblTodayIncome.Location = new System.Drawing.Point(157, 141);
+            this.lblTodayIncome.Location = new System.Drawing.Point(118, 115);
+            this.lblTodayIncome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTodayIncome.Name = "lblTodayIncome";
-            this.lblTodayIncome.Size = new System.Drawing.Size(14, 16);
+            this.lblTodayIncome.Size = new System.Drawing.Size(13, 13);
             this.lblTodayIncome.TabIndex = 4;
             this.lblTodayIncome.Text = "0";
             this.lblTodayIncome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,18 +140,20 @@
             // lable4
             // 
             this.lable4.AutoSize = true;
-            this.lable4.Location = new System.Drawing.Point(154, 21);
+            this.lable4.Location = new System.Drawing.Point(116, 17);
+            this.lable4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lable4.Name = "lable4";
-            this.lable4.Size = new System.Drawing.Size(104, 16);
+            this.lable4.Size = new System.Drawing.Size(81, 13);
             this.lable4.TabIndex = 3;
             this.lable4.Text = "Today\'s income";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(26, 21);
+            this.pictureBox3.Location = new System.Drawing.Point(20, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 136);
+            this.pictureBox3.Size = new System.Drawing.Size(75, 110);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -155,18 +164,20 @@
             this.panel4.Controls.Add(this.lbltotalBar);
             this.panel4.Controls.Add(this.lablel9);
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(397, 21);
+            this.panel4.Location = new System.Drawing.Point(298, 17);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(314, 176);
+            this.panel4.Size = new System.Drawing.Size(236, 143);
             this.panel4.TabIndex = 1;
             // 
             // lbltotalBar
             // 
             this.lbltotalBar.AutoSize = true;
-            this.lbltotalBar.Location = new System.Drawing.Point(285, 141);
+            this.lbltotalBar.Location = new System.Drawing.Point(214, 115);
+            this.lbltotalBar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltotalBar.Name = "lbltotalBar";
             this.lbltotalBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbltotalBar.Size = new System.Drawing.Size(14, 16);
+            this.lbltotalBar.Size = new System.Drawing.Size(13, 13);
             this.lbltotalBar.TabIndex = 3;
             this.lbltotalBar.Text = "0";
             this.lbltotalBar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,18 +185,20 @@
             // lablel9
             // 
             this.lablel9.AutoSize = true;
-            this.lablel9.Location = new System.Drawing.Point(156, 21);
+            this.lablel9.Location = new System.Drawing.Point(117, 17);
+            this.lablel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lablel9.Name = "lablel9";
-            this.lablel9.Size = new System.Drawing.Size(97, 16);
+            this.lablel9.Size = new System.Drawing.Size(78, 13);
             this.lablel9.TabIndex = 2;
             this.lablel9.Text = "Total of Barista";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(30, 21);
+            this.pictureBox2.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 136);
+            this.pictureBox2.Size = new System.Drawing.Size(75, 110);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -196,18 +209,20 @@
             this.panel3.Controls.Add(this.lblTotalcus);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(25, 21);
+            this.panel3.Location = new System.Drawing.Point(19, 17);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(314, 176);
+            this.panel3.Size = new System.Drawing.Size(236, 143);
             this.panel3.TabIndex = 0;
             // 
             // lblTotalcus
             // 
             this.lblTotalcus.AutoSize = true;
-            this.lblTotalcus.Location = new System.Drawing.Point(286, 141);
+            this.lblTotalcus.Location = new System.Drawing.Point(214, 115);
+            this.lblTotalcus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalcus.Name = "lblTotalcus";
             this.lblTotalcus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblTotalcus.Size = new System.Drawing.Size(14, 16);
+            this.lblTotalcus.Size = new System.Drawing.Size(13, 13);
             this.lblTotalcus.TabIndex = 2;
             this.lblTotalcus.Text = "0";
             this.lblTotalcus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,37 +230,41 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(151, 21);
+            this.label1.Location = new System.Drawing.Point(113, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 16);
+            this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Total of Customer";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(28, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 136);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(27, 239);
+            this.panel2.Location = new System.Drawing.Point(20, 194);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1482, 426);
+            this.panel2.Size = new System.Drawing.Size(1112, 346);
             this.panel2.TabIndex = 1;
             // 
             // frmManagerDashBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmManagerDashBoard";
-            this.Size = new System.Drawing.Size(1550, 688);
+            this.Size = new System.Drawing.Size(1162, 559);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();

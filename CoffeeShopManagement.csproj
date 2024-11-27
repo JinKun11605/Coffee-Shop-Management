@@ -240,6 +240,7 @@
     <Content Include="Resources\cafeden.jpg" />
     <Content Include="Resources\cafesua.jpg" />
     <None Include="Resources\customer-icon.png" />
+    <None Include="Resources\chart.png" />
     <Content Include="Resources\duongden.jpg" />
     <Content Include="Resources\epcam.jpg" />
     <Content Include="Resources\epcarot.jpg" />
@@ -248,6 +249,9 @@
     <None Include="Resources\id-icon2.jpg" />
     <None Include="Resources\guest1.png" />
     <None Include="Resources\eye.png" />
+    <None Include="Resources\icon-dash-board.png" />
+    <None Include="Resources\icon-info.png" />
+    <None Include="Resources\id.png" />
     <Content Include="Resources\ID001.jpg" />
     <Content Include="Resources\ID002.jpg" />
     <Content Include="Resources\ID003.jpg" />
@@ -263,6 +267,9 @@
     <Content Include="Resources\ID013.jpg" />
     <None Include="Resources\logo-shop2.png" />
     <None Include="Resources\manager-icon.png" />
+    <None Include="Resources\logistics.png" />
+    <None Include="Resources\inventory.png" />
+    <None Include="Resources\log-out.png" />
     <Content Include="Resources\matcha.jpg" />
     <None Include="Resources\password.png" />
     <Content Include="Resources\sinhtobo.jpg" />
