@@ -142,6 +142,7 @@
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManager";
             this.Text = "frmManager";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

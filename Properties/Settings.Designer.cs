@@ -99,5 +99,27 @@ namespace CoffeeShopManagement.Properties {
                 return ((string)(this["CoffeeShopDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-NONF2UG3\\MSSQLSERVER1;Integrated Security=True;Connect Timeout" +
+            "=30;Encrypt=True;TrustServerCertificate=True")]
+        public string DataSourceConnectionString1 {
+            get {
+                return ((string)(this["DataSourceConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-NONF2UG3\\MSSQLSERVER1;Initial Catalog=CoffeeShop_DB;Integrated" +
+            " Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True")]
+        public string CoffeeShop_DBConnectionString2 {
+            get {
+                return ((string)(this["CoffeeShop_DBConnectionString2"]));
+            }
+        }
     }
 }

@@ -126,12 +126,13 @@ namespace CoffeeShopManagement
             {
                 MessageBox.Show($"Đăng nhập thành công với tư cách {role}");
                 ToForm(id, role);
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Đăng nhập thất bại, kiểm tra lại Tên đăng nhập hoặc Mật khẩu!");
             }
-            this.Hide();
+            
         }
 
         private void piutureGuest_Click(object sender, EventArgs e)

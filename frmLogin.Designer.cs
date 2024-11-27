@@ -59,7 +59,7 @@
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogin.Font = new System.Drawing.Font("JetBrains Mono NL", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(128, 460);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -117,6 +117,7 @@
             // 
             // guna2ContextMenuStrip1
             // 
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
             this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
@@ -138,12 +139,12 @@
             this.radioCustomer.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.radioCustomer.CheckedState.InnerColor = System.Drawing.Color.White;
             this.radioCustomer.CheckedState.InnerOffset = -4;
-            this.radioCustomer.Font = new System.Drawing.Font("JetBrains Mono NL", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioCustomer.ForeColor = System.Drawing.Color.Transparent;
             this.radioCustomer.Location = new System.Drawing.Point(296, 4);
             this.radioCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioCustomer.Name = "radioCustomer";
-            this.radioCustomer.Size = new System.Drawing.Size(127, 23);
+            this.radioCustomer.Size = new System.Drawing.Size(143, 28);
             this.radioCustomer.TabIndex = 17;
             this.radioCustomer.Text = "Khách hàng";
             this.radioCustomer.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -161,12 +162,12 @@
             this.radioBarista.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.radioBarista.CheckedState.InnerColor = System.Drawing.Color.White;
             this.radioBarista.CheckedState.InnerOffset = -4;
-            this.radioBarista.Font = new System.Drawing.Font("JetBrains Mono NL", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBarista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioBarista.ForeColor = System.Drawing.Color.Transparent;
             this.radioBarista.Location = new System.Drawing.Point(177, 4);
             this.radioBarista.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioBarista.Name = "radioBarista";
-            this.radioBarista.Size = new System.Drawing.Size(97, 23);
+            this.radioBarista.Size = new System.Drawing.Size(108, 28);
             this.radioBarista.TabIndex = 18;
             this.radioBarista.Text = "Pha chế";
             this.radioBarista.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -184,12 +185,12 @@
             this.radioManager.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.radioManager.CheckedState.InnerColor = System.Drawing.Color.White;
             this.radioManager.CheckedState.InnerOffset = -4;
-            this.radioManager.Font = new System.Drawing.Font("JetBrains Mono NL", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioManager.ForeColor = System.Drawing.Color.Transparent;
             this.radioManager.Location = new System.Drawing.Point(44, 4);
             this.radioManager.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioManager.Name = "radioManager";
-            this.radioManager.Size = new System.Drawing.Size(97, 23);
+            this.radioManager.Size = new System.Drawing.Size(103, 28);
             this.radioManager.TabIndex = 19;
             this.radioManager.Text = "Quản lý";
             this.radioManager.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -282,7 +283,7 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(229)))), ((int)(((byte)(227)))));
             this.ClientSize = new System.Drawing.Size(428, 539);
@@ -295,7 +296,7 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureOption);
-            this.Font = new System.Drawing.Font("JetBrains Mono NL", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLogin";

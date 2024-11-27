@@ -21,8 +21,6 @@ namespace CoffeeShopManagement
             frmManagerDashBoard frm = new frmManagerDashBoard();
             frm.Dock = DockStyle.Fill;
             pnMain.Controls.Add(frm);
-
-
         }
 
         private void btnInfo_Click(object sender, EventArgs e)

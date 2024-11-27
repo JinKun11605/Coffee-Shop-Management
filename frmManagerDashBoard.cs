@@ -12,7 +12,8 @@ namespace CoffeeShopManagement
 {
     public partial class frmManagerDashBoard : UserControl
     {
-        private CoffeeShopDBDataContext context = new CoffeeShopDBDataContext();
+        CoffeeShopDBDataContext context = new CoffeeShopDBDataContext();
+
         public frmManagerDashBoard()
         {
             InitializeComponent();
@@ -32,14 +33,15 @@ namespace CoffeeShopManagement
         public decimal IncomeToday()
         {
             DateTime today = DateTime.Today;
-            return (decimal) context.Orders
-                     .Where(o => o.OrderDate.Date == today)
-                     .Sum(o => o.TotalAmount);
+
+            return context.Orders
+                          .Where(o => o.OrderDate.Date == today)
+                          .Sum(o => (decimal?)o.TotalAmount) ?? 0;
         }
 
         public decimal TotalIncome()
         {
-            return (decimal)context.Orders.Sum(o => o.TotalAmount);
+            return context.Orders.Sum(o => (decimal?)o.TotalAmount) ?? 0;
         }
 
         private void LoadData()
@@ -48,10 +50,6 @@ namespace CoffeeShopManagement
             lbltotalBar.Text = TotalBaristas().ToString();
             lblTodayIncome.Text = IncomeToday().ToString("N0") + " VND";
             lblTotalIncome.Text = TotalIncome().ToString("N0") + " VND";
-
-
         }
-
-
     }
 }
