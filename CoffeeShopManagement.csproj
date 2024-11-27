@@ -66,8 +66,14 @@
     </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="frmBaristaInfo.cs">
+    <Compile Include="frmBarista.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBarista.Designer.cs">
+      <DependentUpon>frmBarista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaristaInfo.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmBaristaInfo.Designer.cs">
       <DependentUpon>frmBaristaInfo.cs</DependentUpon>
@@ -79,7 +85,7 @@
       <DependentUpon>frmBaristaList.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBaristaMixing.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmBaristaMixing.Designer.cs">
       <DependentUpon>frmBaristaMixing.cs</DependentUpon>
@@ -97,7 +103,7 @@
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCustomerInfo.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmCustomerInfo.Designer.cs">
       <DependentUpon>frmCustomerInfo.cs</DependentUpon>
@@ -139,7 +145,7 @@
       <DependentUpon>frmManagerInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
@@ -152,6 +158,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe.cs" />
+    <EmbeddedResource Include="frmBarista.resx">
+      <DependentUpon>frmBarista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBaristaInfo.resx">
       <DependentUpon>frmBaristaInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCheckout.resx">
       <DependentUpon>frmCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustomerInfo.resx">
       <DependentUpon>frmCustomerInfo.cs</DependentUpon>

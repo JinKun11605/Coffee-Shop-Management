@@ -12,9 +12,32 @@ namespace CoffeeShopManagement
 {
     public partial class frmCustomer : Form
     {
-        public frmCustomer()
+        private string customerID;
+        public frmCustomer(String CustomerID)
         {
             InitializeComponent();
+            customerID = CustomerID;
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            frmMenu frm = new frmMenu(customerID);
+            pnMain.Controls.Add(frm);
+        }
+
+        private void imgLogout_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Close();
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            frmCustomerInfo frm = new frmCustomerInfo(customerID);
+            pnMain.Controls.Add(frm);
         }
     }
 }

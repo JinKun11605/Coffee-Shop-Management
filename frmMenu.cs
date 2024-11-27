@@ -3,15 +3,15 @@ using ProjectOOP;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
 
 namespace CoffeeShopManagement
 {
-    public partial class frmMenu : Form
+    public partial class frmMenu : UserControl
     {
         string CustemerID;
         CoffeeShopDBDataContext context = new CoffeeShopDBDataContext();
+
         public frmMenu(string custemerID)
         {
             InitializeComponent();
@@ -19,7 +19,6 @@ namespace CoffeeShopManagement
             LoadData();
             lblCustomerID.Text += CustemerID;
             RegisterComboBoxEvents();
-
         }
 
         private List<OrderDetails> cartItems = new List<OrderDetails>();
@@ -38,9 +37,12 @@ namespace CoffeeShopManagement
 
             priceCheckBox.Text = adjustedPrice.ToString("N0") + " VND";
         }
+
         private double discount(string CustomerID)
         {
             var customers = context.Customers.FirstOrDefault(c => c.CustomerID == CustomerID);
+            if (customers == null) return 0;
+
             if (customers.CustomerLevel == "Kim Cương")
             {
                 return 0.1;
@@ -53,7 +55,7 @@ namespace CoffeeShopManagement
             {
                 return 0.05;
             }
-            else if (customers.CustomerLevel == "bạc")
+            else if (customers.CustomerLevel == "Bạc")
             {
                 return 0.03;
             }
@@ -63,6 +65,7 @@ namespace CoffeeShopManagement
             }
             return 0;
         }
+
         private OrderDetails GetItem(PictureBox pictureBox, CheckBox priceCheckBox, ComboBox sizeComboBox, NumericUpDown quantityUpDown, string name, decimal basePrice)
         {
             if (priceCheckBox != null && priceCheckBox.Checked)
@@ -76,6 +79,7 @@ namespace CoffeeShopManagement
                 {
                     quantityUpDown.Value = 1;
                 }
+
                 decimal adjustedPrice = basePrice;
                 if (sizeComboBox.SelectedIndex == 1)
                 {
@@ -88,7 +92,6 @@ namespace CoffeeShopManagement
 
                 return new OrderDetails
                 {
-
                     ProductName = name,
                     Quantity = (int)quantityUpDown.Value,
                     Price = adjustedPrice * (1 - (decimal)discount(CustemerID)),
@@ -99,6 +102,7 @@ namespace CoffeeShopManagement
             }
             return null;
         }
+
         private bool IsAnyCheckBoxChecked()
         {
             return this.Controls.OfType<CheckBox>().Any(cb => cb.Checked);
@@ -106,6 +110,7 @@ namespace CoffeeShopManagement
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             if (!IsAnyCheckBoxChecked())
             {
                 MessageBox.Show("Vui lòng chọn ít nhất một sản phẩm để thêm vào giỏ hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -115,15 +120,15 @@ namespace CoffeeShopManagement
             var itemsToAdd = new List<OrderDetails>
             {
                 GetItem(DRK001, pricecafeden, sizecafeden, quantitycafeden, "Cà phê đen", 20000),
-                GetItem(DRK002,pricecafesua, sizecafesua, quantitycafesua, "Cà phê sữa", 25000),
+                GetItem(DRK002, pricecafesua, sizecafesua, quantitycafesua, "Cà phê sữa", 25000),
                 GetItem(DRK003, priceepcam, sizeepcam, quantityepcam, "Ép cam", 15000),
-                GetItem(DRK004,priceepcarot, sizeepcarot, quantityepcarot, "Ép cà rốt", 15000),
-                GetItem(DRK005,priceepoi, sizeepoi, quantityepoi, "Ép ổi", 15000),
+                GetItem(DRK004, priceepcarot, sizeepcarot, quantityepcarot, "Ép cà rốt", 15000),
+                GetItem(DRK005, priceepoi, sizeepoi, quantityepoi, "Ép ổi", 15000),
                 GetItem(DRK006, priceepduahau, sizeepduahau, quantityepduahau, "Ép dưa hấu", 15000),
                 GetItem(DRK007, pricesinhtodau, sizesinhtodau, quantitysinhtodau, "Sinh tố dâu", 30000),
-                GetItem(DRK008,pricesinhtobo, sizesinhtobo, quantitysinhtobo, "Sinh tố bơ", 30000),
-                GetItem(DRK009,pricematcha, sizematcha, quantitymatcha, "Trà sữa thái xanh", 35000),
-                GetItem(DRK0010,priceduongden, sizeduongden, quantityduongden, "Trà sữa trân châu đường đen", 35000),
+                GetItem(DRK008, pricesinhtobo, sizesinhtobo, quantitysinhtobo, "Sinh tố bơ", 30000),
+                GetItem(DRK009, pricematcha, sizematcha, quantitymatcha, "Trà sữa thái xanh", 35000),
+                GetItem(DRK0010, priceduongden, sizeduongden, quantityduongden, "Trà sữa trân châu đường đen", 35000),
             };
 
             foreach (var item in itemsToAdd)
@@ -131,6 +136,7 @@ namespace CoffeeShopManagement
                 if (item != null) cartItems.Add(item);
             }
 
+            LoadData();
             MessageBox.Show("Đã thêm vào giỏ hàng!");
             ClearSelection();
             isBtnAddClicked = true;
@@ -152,14 +158,12 @@ namespace CoffeeShopManagement
                 {
                     numericUpDown.Value = 0;
                 }
-                else if (control is CheckBox checkbox)
-                {
-                    checkbox.Text = "VND";
-                }
             }
         }
 
+
         private bool isBtnAddClicked = false;
+
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             if (cartItems.Count == 0 && !IsAnyCheckBoxChecked())
@@ -179,9 +183,10 @@ namespace CoffeeShopManagement
 
             isBtnAddClicked = false;
             ClearSelection();
+            dataGridView1.DataSource = null;
         }
 
-        // Đăng ký sự kiện SelectedIndexChanged cho các ComboBox để cập nhật giá
+
         private void RegisterComboBoxEvents()
         {
             sizecafeden.SelectedIndexChanged += (s, e) => UpdatePriceDisplay(pricecafeden, sizecafeden, 20000);
@@ -196,29 +201,22 @@ namespace CoffeeShopManagement
             sizematcha.SelectedIndexChanged += (s, e) => UpdatePriceDisplay(pricematcha, sizematcha, 35000);
         }
 
-    
+
         private void btnReLoad_Click(object sender, EventArgs e)
         {
             LoadData();
         }
 
+
         private void LoadData()
         {
-            try
+            if (cartItems.Count > 0)
             {
-                var products = context.Products
-                             .Select(p => new
-                             {
-                                 Size = p.Size,
-                                 ProductName = p.ProductName,
-                                 Quantity = p.Quantity
-                             })
-                             .ToList();
-                dataGridView1.DataSource = products;
+                dataGridView1.DataSource = cartItems;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Lỗi khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataGridView1.DataSource = null;
             }
         }
     }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CoffeeShopManagement
 {
-    public partial class frmCustomerInfo : Form
+    public partial class frmCustomerInfo : UserControl
     {
         private string customerID;
         public string CustomerID { get => customerID; set => customerID = value; }

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace CoffeeShopManagement
 {
 
-    public partial class frmBaristaInfo : Form
+    public partial class frmBaristaInfo : UserControl
     {
         private string baristaID;
         public string BaristaID { get => baristaID; set => baristaID = value; }

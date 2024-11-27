@@ -88,12 +88,12 @@ namespace CoffeeShopManagement
             }
             else if (role == "Barista")
             {
-                var formBarista = new frmBaristaInfo(id);
+                var formBarista = new frmBarista(id);
                 formBarista.Show();
             }
             else if (role == "Customer")
             {
-                var formCustomer = new frmCustomerInfo(id);
+                var formCustomer = new frmCustomer(id);
                 formCustomer.Show();
             }
         }
@@ -151,6 +151,11 @@ namespace CoffeeShopManagement
             {
                 txtPassword.PasswordChar = '●';
             }
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

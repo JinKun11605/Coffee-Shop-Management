@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace CoffeeShopManagement
 {
-    public partial class frmBaristaMixing : Form
+    public partial class frmBaristaMixing : UserControl
     {
         CoffeeShopDBDataContext context = new CoffeeShopDBDataContext();
 

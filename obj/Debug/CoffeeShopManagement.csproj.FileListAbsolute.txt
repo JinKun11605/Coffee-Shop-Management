@@ -144,3 +144,5 @@ C:\Users\Admin\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.csproj.Core
 C:\Users\Admin\Coffee-Shop-Management\obj\Debug\CoffeeSh.AD010B53.Up2Date
 C:\Users\Admin\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.exe
 C:\Users\Admin\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.pdb
+S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.frmBarista.resources
+S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.frmCustomer.resources

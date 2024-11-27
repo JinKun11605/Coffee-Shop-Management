@@ -271,7 +271,6 @@
             this.Font = new System.Drawing.Font("JetBrains Mono NL", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCustomerInfo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THÔNG TIN KHÁCH HÀNG";
             this.Load += new System.EventHandler(this.frmCustomerInfo_Load);
             this.groupBox2.ResumeLayout(false);

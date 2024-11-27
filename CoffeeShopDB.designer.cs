@@ -22,7 +22,7 @@ namespace CoffeeShopManagement
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="CoffeeShopDB")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="CoffeeShop_DB")]
 	public partial class CoffeeShopDBDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -51,7 +51,7 @@ namespace CoffeeShopManagement
     #endregion
 		
 		public CoffeeShopDBDataContext() : 
-				base(global::CoffeeShopManagement.Properties.Settings.Default.CoffeeShopDBConnectionString, mappingSource)
+				base(global::CoffeeShopManagement.Properties.Settings.Default.CoffeeShop_DBConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -147,8 +147,6 @@ namespace CoffeeShopManagement
 		
 		private string _CustomerLevel;
 		
-		private EntitySet<Order> _Orders;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -169,7 +167,6 @@ namespace CoffeeShopManagement
 		
 		public Customer()
 		{
-			this._Orders = new EntitySet<Order>(new Action<Order>(this.attach_Orders), new Action<Order>(this.detach_Orders));
 			OnCreated();
 		}
 		
@@ -293,19 +290,6 @@ namespace CoffeeShopManagement
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_Order", Storage="_Orders", ThisKey="CustomerID", OtherKey="CustomerID")]
-		public EntitySet<Order> Orders
-		{
-			get
-			{
-				return this._Orders;
-			}
-			set
-			{
-				this._Orders.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -324,18 +308,6 @@ namespace CoffeeShopManagement
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_Orders(Order entity)
-		{
-			this.SendPropertyChanging();
-			entity.Customer = this;
-		}
-		
-		private void detach_Orders(Order entity)
-		{
-			this.SendPropertyChanging();
-			entity.Customer = null;
 		}
 	}
 	
@@ -1051,13 +1023,11 @@ namespace CoffeeShopManagement
 		
 		private System.DateTime _OrderDate;
 		
-		private System.Nullable<int> _Rating;
+		private int _Rating;
 		
-		private System.Nullable<decimal> _TotalAmount;
+		private decimal _TotalAmount;
 		
 		private EntitySet<OrderDetail> _OrderDetails;
-		
-		private EntityRef<Customer> _Customer;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1069,16 +1039,15 @@ namespace CoffeeShopManagement
     partial void OnCustomerIDChanged();
     partial void OnOrderDateChanging(System.DateTime value);
     partial void OnOrderDateChanged();
-    partial void OnRatingChanging(System.Nullable<int> value);
+    partial void OnRatingChanging(int value);
     partial void OnRatingChanged();
-    partial void OnTotalAmountChanging(System.Nullable<decimal> value);
+    partial void OnTotalAmountChanging(decimal value);
     partial void OnTotalAmountChanged();
     #endregion
 		
 		public Order()
 		{
 			this._OrderDetails = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetails), new Action<OrderDetail>(this.detach_OrderDetails));
-			this._Customer = default(EntityRef<Customer>);
 			OnCreated();
 		}
 		
@@ -1102,7 +1071,7 @@ namespace CoffeeShopManagement
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerID", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerID", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string CustomerID
 		{
 			get
@@ -1113,10 +1082,6 @@ namespace CoffeeShopManagement
 			{
 				if ((this._CustomerID != value))
 				{
-					if (this._Customer.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnCustomerIDChanging(value);
 					this.SendPropertyChanging();
 					this._CustomerID = value;
@@ -1146,8 +1111,8 @@ namespace CoffeeShopManagement
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int")]
-		public System.Nullable<int> Rating
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
+		public int Rating
 		{
 			get
 			{
@@ -1166,8 +1131,8 @@ namespace CoffeeShopManagement
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalAmount", DbType="Decimal(10,2)")]
-		public System.Nullable<decimal> TotalAmount
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalAmount", DbType="Decimal(10,2) NOT NULL")]
+		public decimal TotalAmount
 		{
 			get
 			{
@@ -1196,40 +1161,6 @@ namespace CoffeeShopManagement
 			set
 			{
 				this._OrderDetails.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_Order", Storage="_Customer", ThisKey="CustomerID", OtherKey="CustomerID", IsForeignKey=true)]
-		public Customer Customer
-		{
-			get
-			{
-				return this._Customer.Entity;
-			}
-			set
-			{
-				Customer previousValue = this._Customer.Entity;
-				if (((previousValue != value) 
-							|| (this._Customer.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Customer.Entity = null;
-						previousValue.Orders.Remove(this);
-					}
-					this._Customer.Entity = value;
-					if ((value != null))
-					{
-						value.Orders.Add(this);
-						this._CustomerID = value.CustomerID;
-					}
-					else
-					{
-						this._CustomerID = default(string);
-					}
-					this.SendPropertyChanged("Customer");
-				}
 			}
 		}
 		
@@ -1278,9 +1209,9 @@ namespace CoffeeShopManagement
 		
 		private string _Size;
 		
-		private System.Nullable<decimal> _Price;
+		private decimal _Price;
 		
-		private System.Nullable<int> _Quantity;
+		private int _Quantity;
 		
 		private EntitySet<OrderDetail> _OrderDetails;
 		
@@ -1294,9 +1225,9 @@ namespace CoffeeShopManagement
     partial void OnProductNameChanged();
     partial void OnSizeChanging(string value);
     partial void OnSizeChanged();
-    partial void OnPriceChanging(System.Nullable<decimal> value);
+    partial void OnPriceChanging(decimal value);
     partial void OnPriceChanged();
-    partial void OnQuantityChanging(System.Nullable<int> value);
+    partial void OnQuantityChanging(int value);
     partial void OnQuantityChanged();
     #endregion
 		
@@ -1326,7 +1257,7 @@ namespace CoffeeShopManagement
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string ProductName
 		{
 			get
@@ -1346,7 +1277,7 @@ namespace CoffeeShopManagement
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Size", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Size", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Size
 		{
 			get
@@ -1366,8 +1297,8 @@ namespace CoffeeShopManagement
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Decimal(18,2) NOT NULL")]
+		public decimal Price
 		{
 			get
 			{
@@ -1386,8 +1317,8 @@ namespace CoffeeShopManagement
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int")]
-		public System.Nullable<int> Quantity
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int NOT NULL")]
+		public int Quantity
 		{
 			get
 			{
