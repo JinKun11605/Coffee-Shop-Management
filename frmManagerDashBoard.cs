@@ -27,7 +27,7 @@ namespace CoffeeShopManagement
 
         public int TotalBaristas()
         {
-            return context.Employees.Count(e => e.Role == "Barista");
+            return context.Baristas.Count();
         }
 
         public decimal IncomeToday()

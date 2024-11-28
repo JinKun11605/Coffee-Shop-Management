@@ -69,7 +69,10 @@ namespace CoffeeShopManagement
                 context.OrderDetails.InsertOnSubmit(item);
             }
             context.SubmitChanges();
-            MessageBox.Show("Đã thanh toán thành công.");
+
+            CustomerInfo customerInfo = new CustomerInfo();
+            customerInfo.HandlePaymnent(CalculateTotal());
+
             btnconfirm.Text = "Thanh toán thành công";
             dataGridViewBill.DataSource = null;
             orders.Clear();

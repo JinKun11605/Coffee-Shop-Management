@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace CoffeeShopManagement
 {
@@ -16,5 +17,25 @@ namespace CoffeeShopManagement
             CustomerLevel = customerLevel;
         }
 
+        public override string PrintDetails()
+        {
+            return base.PrintDetails() + $"Hạng: {CustomerLevel}";
+        }
+
+        public void Order(List<OrderDetails> orders)
+        {
+            string result = "";
+            foreach (var order in orders)
+            {
+                result += order.ToString();
+            }
+
+            MessageBox.Show(result, "CÁC MÓN ĐÃ GỌI");
+        }
+
+        public void HandlePaymnent(decimal money)
+        {
+            MessageBox.Show($"Số tiền đã thanh toán: {money.ToString("N0")} VND", "THANH TOÁN");
+        }
     }
 }

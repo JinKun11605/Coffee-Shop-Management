@@ -270,7 +270,8 @@ namespace CoffeeShopManagement
                 MessageBox.Show("Vui lòng chọn ít nhất một mục để pha chế!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            string res = "";
+            BaristaInfo baristaInfo = new BaristaInfo();
             foreach (var cb in Items)
             {
 
@@ -286,6 +287,7 @@ namespace CoffeeShopManagement
                     var product = context.Products.FirstOrDefault(p => p.ProductID == productID);
                     product.Quantity += (int)quantity.Value;
 
+                    res += baristaInfo.Mixing(product.ProductName, size.SelectedItem.ToString(), (int)quantity.Value);
 
                     id.Checked = false;
                     size.SelectedIndex = -1;
@@ -296,7 +298,7 @@ namespace CoffeeShopManagement
             {
                 context.SubmitChanges();
                 LoadData();
-                MessageBox.Show("Cập nhật thành công!");
+                MessageBox.Show(res, "PHA CHẾ");
             }
             catch (Exception ex)
             {

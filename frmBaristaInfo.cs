@@ -26,23 +26,23 @@ namespace CoffeeShopManagement
         {
             CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
 
-            var manager = db.Employees.FirstOrDefault(em => em.EmployeeID == BaristaID);
+            var barista = db.Baristas.FirstOrDefault(em => em.BaristaID == BaristaID);
 
-            lblShowFullName.Text = manager.FullName;
-            lblShowBirthDay.Text = manager.BirthDay.ToString("dd/MM/yyyy");
-            lblShowHireDay.Text = manager.HireDay.ToString("dd/MM/yyyy");
-            lblShowPhoneNumber.Text = manager.PhoneNumber;
-            lblShowSalary.Text = manager.Salary.ToString();
-            lblShowYoW.Text = manager.YoE.ToString();
+            lblShowFullName.Text = barista.FullName;
+            lblShowBirthDay.Text = barista.BirthDay.ToString("dd/MM/yyyy");
+            lblShowHireDay.Text = barista.HireDay.ToString("dd/MM/yyyy");
+            lblShowPhoneNumber.Text = barista.PhoneNumber;
+            lblShowSalary.Text = barista.Salary.ToString();
+            lblShowYoW.Text = barista.YoE.ToString();
 
-            lblShowID.Text = manager.EmployeeID;
-            lblShowPassword.Text = manager.Password;
+            lblShowID.Text = barista.BaristaID;
+            lblShowPassword.Text = barista.Password;
 
-            if (manager.Image != null)
+            if (barista.Image != null)
             {
                 try
                 {
-                    MemoryStream ms = new MemoryStream(manager.Image.ToArray());
+                    MemoryStream ms = new MemoryStream(barista.Image.ToArray());
                     pictureManager.Image = Image.FromStream(ms);
                 }
                 catch (Exception ex)
@@ -54,6 +54,9 @@ namespace CoffeeShopManagement
             {
                 pictureManager.Image = null;
             }
+
+            var baristaInfo = new BaristaInfo(barista.BaristaID, barista.Password, barista.FullName, barista.BirthDay, barista.PhoneNumber, barista.HireDay, barista.YoE, barista.Salary);
+            MessageBox.Show($"{baristaInfo.PrintDetails()}", "THÔNG TIN NHÂN VIÊN PHA CHẾ");
         }
 
         private void btnBartending_Click(object sender, EventArgs e)

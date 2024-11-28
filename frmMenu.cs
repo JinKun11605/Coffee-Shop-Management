@@ -136,8 +136,10 @@ namespace CoffeeShopManagement
                 if (item != null) cartItems.Add(item);
             }
 
+            CustomerInfo customer = new CustomerInfo();
+            customer.Order(cartItems);
+
             LoadData();
-            MessageBox.Show("Đã thêm vào giỏ hàng!");
             ClearSelection();
             isBtnAddClicked = true;
         }

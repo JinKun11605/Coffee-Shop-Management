@@ -30,16 +30,15 @@ namespace CoffeeShopManagement
 
             CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
 
-            var baristaList = db.Employees
-                .Where(e => e.Role == "Barista")
-                .Select(e => new EmployeeInfo
+            var baristaList = db.Baristas
+                .Select(e => new BaristaInfo
                 {
                     FullName = e.FullName,
                     BirthDay = e.BirthDay,
                     HireDay = e.HireDay,
                     PhoneNumber = e.PhoneNumber,
                     Salary = e.Salary,
-                    ID = e.EmployeeID,
+                    ID = e.BaristaID,
                     Password = e.Password,
                     YoE = e.YoE
                 })
@@ -83,24 +82,23 @@ namespace CoffeeShopManagement
             pictureBox.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             return ms.ToArray();
         }
-        public void AddBarista(Barista barista)
+        public void AddBarista(BaristaInfo baristaInfo)
         {
-            Employee employee = new Employee
+            Barista barista = new Barista
             {
-                EmployeeID = barista.ID,
-                Password = barista.Password,
-                Role = barista.Role,
-                FullName = barista.FullName,
-                BirthDay = barista.BirthDay,
-                PhoneNumber = barista.PhoneNumber,
-                HireDay = barista.HireDay,
-                YoE = barista.YoE,
-                Salary = barista.Salary,
-                Image = barista.Image
+                BaristaID = baristaInfo.ID,
+                Password = baristaInfo.Password,
+                FullName = baristaInfo.FullName,
+                BirthDay = baristaInfo.BirthDay,
+                PhoneNumber = baristaInfo.PhoneNumber,
+                HireDay = baristaInfo.HireDay,
+                YoE = baristaInfo.YoE,
+                Salary = baristaInfo.Salary,
+                Image = ConvertImageToByteArray(pictureBarista)
             };
 
             CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
-            db.Employees.InsertOnSubmit(employee);
+            db.Baristas.InsertOnSubmit(barista);
             db.SubmitChanges();
 
             MessageBox.Show("Thêm Barista thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -144,21 +142,21 @@ namespace CoffeeShopManagement
 
             // Kiểm tra xem ID đã tồn tại chứa <= ID là khóa chính
             CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
-            if (db.Employees.Where(em => em.EmployeeID == id).Any())
+            if (db.Baristas.Where(em => em.BaristaID == id).Any())
             {
                 MessageBox.Show("Tài khoản đã tồn tại, vui lòng đổi tài khoản khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Barista barista = new Barista(id, password, fullName, birthDay, phoneNumber, hireDay, yoE, salary, image);
-            AddBarista(barista);
+            BaristaInfo baristaInfo  = new BaristaInfo(id, password, fullName, birthDay, phoneNumber, hireDay, yoE, salary);
+            AddBarista(baristaInfo);
 
             LoadData();
             Clear();
         }
         private void cbSort_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var data = (List<EmployeeInfo>)dgvBarista.DataSource;
+            var data = (List<BaristaInfo>)dgvBarista.DataSource;
             string optionSort = cbSort.Text;
 
             if (optionSort == "Họ và tên")
@@ -188,16 +186,16 @@ namespace CoffeeShopManagement
 
             CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
 
-            var barista = db.Employees
-                .Where(u => u.Role == "Barista" && u.EmployeeID == id)
-                .Select(u => new EmployeeInfo
+            var barista = db.Baristas
+                .Where(u => u.BaristaID == id)
+                .Select(u => new BaristaInfo
                 {
                     FullName = u.FullName,
                     BirthDay = u.BirthDay,
                     HireDay = u.HireDay,
                     PhoneNumber = u.PhoneNumber,
                     Salary = u.Salary,
-                    ID = u.EmployeeID,
+                    ID = u.BaristaID,
                     Password = u.Password,
                     YoE = u.YoE
                 })
@@ -224,7 +222,7 @@ namespace CoffeeShopManagement
             dtpHireDay.Value = (DateTime)row.Cells["HireDay"].Value;
 
             CoffeeShopDBDataContext db2 = new CoffeeShopDBDataContext();
-            Employee barista2 = db.Employees.FirstOrDefault(em => em.Role == "Barista" && em.EmployeeID == txtID.Text);
+            Barista barista2 = db.Baristas.FirstOrDefault(em => em.BaristaID == txtID.Text);
 
             if (barista2.Image == null)
             {
@@ -279,22 +277,22 @@ namespace CoffeeShopManagement
             }            
 
             CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
-            var employee = db.Employees.FirstOrDefault(em => em.EmployeeID == id);
+            var barista = db.Baristas.FirstOrDefault(em => em.BaristaID == id);
 
-            if (employee == null)
+            if (barista == null)
             {
                 MessageBox.Show("Không tìm thấy nhân viên Pha chế!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            employee.FullName = txtFullName.Text;
-            employee.BirthDay = dtpBirthDay.Value;
-            employee.HireDay = dtpHireDay.Value;
-            employee.PhoneNumber = txtPhoneNumber.Text;
-            employee.YoE = yoE;
-            employee.Salary = decimal.Parse(txtSalary.Text);
-            employee.Password = txtPassword.Text;
-            employee.Image = image;
+            barista.FullName = txtFullName.Text;
+            barista.BirthDay = dtpBirthDay.Value;
+            barista.HireDay = dtpHireDay.Value;
+            barista.PhoneNumber = txtPhoneNumber.Text;
+            barista.YoE = yoE;
+            barista.Salary = decimal.Parse(txtSalary.Text);
+            barista.Password = txtPassword.Text;
+            barista.Image = image;
 
 
             db.SubmitChanges();
@@ -323,7 +321,7 @@ namespace CoffeeShopManagement
             string id = txtID.Text;
             CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
 
-            Employee barista = db.Employees.FirstOrDefault(em => em.Role == "Barista" && em.EmployeeID == id);
+            Barista barista = db.Baristas.FirstOrDefault(em => em.BaristaID == id);
 
             if (barista.Image == null)
             {
@@ -350,7 +348,7 @@ namespace CoffeeShopManagement
             }
 
             CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
-            var barista = db.Employees.FirstOrDefault(em => em.EmployeeID == txtID.Text);
+            var barista = db.Baristas.FirstOrDefault(em => em.BaristaID == txtID.Text);
 
             if (barista == null)
             {
@@ -358,7 +356,7 @@ namespace CoffeeShopManagement
                 return;
             }
 
-            db.Employees.DeleteOnSubmit(barista);
+            db.Baristas.DeleteOnSubmit(barista);
             db.SubmitChanges();
             LoadData();
             Clear();

@@ -33,9 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblShowYoW = new System.Windows.Forms.Label();
             this.lblShowBirthDay = new System.Windows.Forms.Label();
-            this.btnInventory = new System.Windows.Forms.Button();
-            this.btnBarista = new System.Windows.Forms.Button();
-            this.btnCustomer = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.lblShowPhoneNumber = new System.Windows.Forms.Label();
@@ -50,7 +47,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblShowSalary = new System.Windows.Forms.Label();
             this.Lương = new System.Windows.Forms.Label();
-            this.btnReportSales = new System.Windows.Forms.Button();
             this.pictureManager = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -106,39 +102,6 @@
             this.lblShowBirthDay.Size = new System.Drawing.Size(53, 20);
             this.lblShowBirthDay.TabIndex = 5;
             this.lblShowBirthDay.Text = "label5";
-            // 
-            // btnInventory
-            // 
-            this.btnInventory.Location = new System.Drawing.Point(271, 503);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(127, 38);
-            this.btnInventory.TabIndex = 6;
-            this.btnInventory.Text = "Kho";
-            this.btnInventory.UseVisualStyleBackColor = true;
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
-            // 
-            // btnBarista
-            // 
-            this.btnBarista.Location = new System.Drawing.Point(661, 504);
-            this.btnBarista.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnBarista.Name = "btnBarista";
-            this.btnBarista.Size = new System.Drawing.Size(159, 38);
-            this.btnBarista.TabIndex = 7;
-            this.btnBarista.Text = "Nhân viên Pha chế";
-            this.btnBarista.UseVisualStyleBackColor = true;
-            this.btnBarista.Click += new System.EventHandler(this.btnBarista_Click);
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.Location = new System.Drawing.Point(879, 504);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(98, 38);
-            this.btnCustomer.TabIndex = 8;
-            this.btnCustomer.Text = "Khách hàng";
-            this.btnCustomer.UseVisualStyleBackColor = true;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // button4
             // 
@@ -288,16 +251,6 @@
             this.Lương.TabIndex = 15;
             this.Lương.Text = "Lương";
             // 
-            // btnReportSales
-            // 
-            this.btnReportSales.Location = new System.Drawing.Point(453, 504);
-            this.btnReportSales.Name = "btnReportSales";
-            this.btnReportSales.Size = new System.Drawing.Size(141, 37);
-            this.btnReportSales.TabIndex = 17;
-            this.btnReportSales.Text = "Báo cáo Doanh số";
-            this.btnReportSales.UseVisualStyleBackColor = true;
-            this.btnReportSales.Click += new System.EventHandler(this.btnReportSales_Click);
-            // 
             // pictureManager
             // 
             this.pictureManager.Location = new System.Drawing.Point(145, 239);
@@ -313,12 +266,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.Controls.Add(this.btnReportSales);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnCustomer);
-            this.Controls.Add(this.btnBarista);
-            this.Controls.Add(this.btnInventory);
             this.Controls.Add(this.pictureManager);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -342,9 +291,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblShowYoW;
         private System.Windows.Forms.Label lblShowBirthDay;
-        private System.Windows.Forms.Button btnInventory;
-        private System.Windows.Forms.Button btnBarista;
-        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label lblShowPhoneNumber;
@@ -357,7 +303,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblShowSalary;
         private System.Windows.Forms.Label Lương;
-        private System.Windows.Forms.Button btnReportSales;
         private System.Windows.Forms.Label lblShowHireDay;
         private System.Windows.Forms.Label label9;
     }

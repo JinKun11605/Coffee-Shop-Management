@@ -48,18 +48,19 @@ namespace CoffeeShopManagement
                 return;
             }
 
-
+            string res = "";
+            ManagerInfo managerInfo = new ManagerInfo();
             foreach (var cb in Items)
             {
-
                 if (cb.Item1.Checked)
                 {
+                    
                     CheckBox id = cb.Item1;
                     NumericUpDown quantity = cb.Item2;
 
-                    string ingredientID = id.Name;
-
+                    string ingredientID = id.Name;               
                     var inventory = context.Inventories.FirstOrDefault(p => p.IngredientID == ingredientID);
+                    res += managerInfo.ManageInventory(inventory.IngredientName, (int)quantity.Value);
                     inventory.Quantity += (int)quantity.Value;
                     id.Checked = false;
                     quantity.Value = 0;
@@ -69,7 +70,7 @@ namespace CoffeeShopManagement
             {
                 context.SubmitChanges();
                 LoadData();
-                MessageBox.Show("Cập nhật thành công!");
+                MessageBox.Show(res, "CÁC NGUYÊN LIỆU ĐÃ THÊM");
             }
             catch (Exception ex)
             {

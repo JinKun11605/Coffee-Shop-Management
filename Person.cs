@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CoffeeShopManagement
 {
-    public class Person
+    public abstract class Person
     {
         private string id;         
         private string password;       
@@ -33,6 +33,10 @@ namespace CoffeeShopManagement
             BirthDay = birthDay;
             PhoneNumber = phoneNumber;
         }
-    }
 
+        public virtual string PrintDetails()
+        {
+            return $"Họ và tên: {FullName} \nID: {ID} \nSĐT: {PhoneNumber} \nNgày sinh: {BirthDay} \n";
+        }
+    }
 }

@@ -23,7 +23,7 @@ namespace CoffeeShopManagement
         {
             CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
 
-            var customer = db.Customers.FirstOrDefault(c=> c.CustomerID == CustomerID);
+            var customer = db.Customers.FirstOrDefault(c => c.CustomerID == CustomerID);
 
             lblShowFullName.Text = customer.FullName;
             lblShowBirthDay.Text = customer.BirthDay.ToString("dd/MM/yyyy");
@@ -32,9 +32,9 @@ namespace CoffeeShopManagement
             lblShowPassword.Text = customer.Password;
             lblShowLevel.Text = customer.CustomerLevel;
 
-            //lblShowSalary.Text = manager.Salary.ToString();
-            //lblShowYoW.Text = manager.YoE.ToString();
-
+            // Goi method CustomerInfo
+            var customerInfo = new CustomerInfo(customer.CustomerID, customer.Password, customer.FullName, customer.BirthDay, customer.PhoneNumber, customer.CustomerLevel);
+            MessageBox.Show($"{customerInfo.PrintDetails()}", "THÔNG TIN KHÁCH HÀNG");
         }
 
         private void btnBuy_Click(object sender, EventArgs e)

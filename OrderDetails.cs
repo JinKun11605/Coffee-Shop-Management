@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectOOP
+namespace CoffeeShopManagement
 {
     public class OrderDetails
     {
@@ -22,5 +22,12 @@ namespace ProjectOOP
 
         public string Size { get => size; set => size = value; }
         public double Discount { get => discount; set => discount = value; }
+
+        public override string ToString()
+        {
+            return $"Tên: {ProductName} \n ID: {ProductID} \n  Giá: {Price} \n Số lượng: {Quantity} \n Kích thước: {Size} \n GIảm giá: {Discount} \n\n";
+        }
     }
+
+    
 }

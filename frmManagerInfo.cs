@@ -27,7 +27,7 @@ namespace CoffeeShopManagement
         {
             CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
 
-            var manager = db.Employees.FirstOrDefault(u => u.EmployeeID == ManagerID);
+            var manager = db.Managers.FirstOrDefault(u => u.ManagerID == ManagerID);
 
             lblShowFullName.Text = manager.FullName;
             lblShowBirthDay.Text = manager.BirthDay.ToString("dd/MM/yyyy");
@@ -36,7 +36,7 @@ namespace CoffeeShopManagement
             lblShowSalary.Text = manager.Salary.ToString();
             lblShowYoW.Text = manager.YoE.ToString();
 
-            lblShowID.Text = manager.EmployeeID;
+            lblShowID.Text = manager.ManagerID;
             lblShowPassword.Text = manager.Password;
 
             if (manager.Image != null)
@@ -55,6 +55,11 @@ namespace CoffeeShopManagement
             {
                 pictureManager.Image = null;
             }
+
+            ManagerInfo managerInfo = new ManagerInfo(manager.ManagerID, manager.Password, manager.FullName, manager.BirthDay, manager.PhoneNumber,
+            manager.HireDay, manager.YoE, manager.Salary);
+            
+            MessageBox.Show($"{managerInfo.PrintDetails()}", "THÔNG TIN QUẢN LÝ");
         }
         private void btnBarista_Click(object sender, EventArgs e)
         {

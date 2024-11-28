@@ -74,9 +74,17 @@ namespace CoffeeShopManagement
                 var customer = db.Customers.FirstOrDefault(u => u.CustomerID == id && u.Password == password);
                 return customer != null;
             }
-
-            var employee = db.Employees.FirstOrDefault(u => u.EmployeeID == id && u.Password == password && u.Role == role);
-            return employee != null;
+            else if (role == "Manager")
+            {
+                var manager = db.Managers.FirstOrDefault(u => u.ManagerID == id && u.Password == password);
+                return manager != null;
+            }
+            else if (role == "Barista")
+            {
+                var barista = db.Baristas.FirstOrDefault(u => u.BaristaID == id && u.Password == password);
+                return barista != null;
+            }
+            return false;
         }
 
         public void ToForm(string id, string role)
