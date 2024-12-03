@@ -33,7 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblShowYoW = new System.Windows.Forms.Label();
             this.lblShowBirthDay = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.lblShowPhoneNumber = new System.Windows.Forms.Label();
             this.lblShowFullName = new System.Windows.Forms.Label();
@@ -102,16 +101,6 @@
             this.lblShowBirthDay.Size = new System.Drawing.Size(53, 20);
             this.lblShowBirthDay.TabIndex = 5;
             this.lblShowBirthDay.Text = "label5";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(52, 158);
-            this.button4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(126, 30);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Đổi mật khẩu";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // lbl
             // 
@@ -184,7 +173,6 @@
             // 
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.lblShowID);
-            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.lblShowPassword);
             this.groupBox1.Location = new System.Drawing.Point(749, 168);
@@ -291,7 +279,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblShowYoW;
         private System.Windows.Forms.Label lblShowBirthDay;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label lblShowPhoneNumber;
         private System.Windows.Forms.Label lblShowFullName;

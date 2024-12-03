@@ -145,7 +145,7 @@ namespace CoffeeShopManagement
 
         private void piutureGuest_Click(object sender, EventArgs e)
         {
-            frmMenu frm = new frmMenu("GUEST");
+            frmCustomer frm = new frmCustomer("GUEST");
             frm.Show();
         }
 

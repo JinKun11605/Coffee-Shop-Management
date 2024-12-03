@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Barista.cs" />
+    <Compile Include="Coffee.cs" />
     <Compile Include="CoffeeShopDB.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -65,7 +66,6 @@
       <DependentUpon>CoffeeShop_DBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
-    <Compile Include="Employee.cs" />
     <Compile Include="frmBarista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +150,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmReportSales.Designer.cs">
+      <DependentUpon>frmReportSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="OrderDetails.cs" />
     <Compile Include="Orders.cs" />
@@ -200,6 +206,9 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportSales.resx">
+      <DependentUpon>frmReportSales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -210,7 +219,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="CoffeeShop_Diagram.cd" />
     <None Include="CoffeeShopDB.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>CoffeeShopDB.designer.cs</LastGenOutput>

@@ -37,10 +37,14 @@ namespace CoffeeShopManagement
         {
             return $"Tên: {IngredientName}, Số lương: {quantity}";
         }
-
-        public string ReportSales(decimal totalIncome, int quantity, double avgStar)
+        CoffeeShopDBDataContext db = new CoffeeShopDBDataContext();
+        public decimal GetTotalSales(DateTime startDate, DateTime endDate)
         {
-            return $"Tổng doanh thu: {totalIncome} \nSố lượng bán ra: {quantity} \nĐánh giá trung bình: {avgStar}";
+            var totalSales = db.Orders
+                .Where(order => order.OrderDate >= startDate && order.OrderDate <= endDate)
+                .Sum(order => order.TotalAmount);
+
+            return totalSales;
         }
     }
 }

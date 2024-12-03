@@ -194,7 +194,7 @@
             // btnReLoad
             // 
             this.btnReLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReLoad.Location = new System.Drawing.Point(1338, 630);
+            this.btnReLoad.Location = new System.Drawing.Point(1178, 630);
             this.btnReLoad.Name = "btnReLoad";
             this.btnReLoad.Size = new System.Drawing.Size(225, 51);
             this.btnReLoad.TabIndex = 80;
@@ -327,10 +327,10 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1185, 72);
+            this.dataGridView1.Location = new System.Drawing.Point(1074, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(548, 502);
+            this.dataGridView1.Size = new System.Drawing.Size(439, 502);
             this.dataGridView1.TabIndex = 78;
             // 
             // ID013
@@ -617,7 +617,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 753);
             this.Controls.Add(this.picID002);
             this.Controls.Add(this.ID012);
             this.Controls.Add(this.quantityID012);
@@ -662,7 +661,7 @@
             this.Controls.Add(this.ID005);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInventory";
-            this.Text = "frmInventory";
+            this.Size = new System.Drawing.Size(1924, 753);
             ((System.ComponentModel.ISupportInitialize)(this.picID002)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityID012)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityID008)).EndInit();

@@ -1,5 +1,4 @@
 ﻿using CoffeeShopManagement;
-using ProjectOOP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +18,7 @@ namespace CoffeeShopManagement
 
         List<OrderDetails> orders;
         string CustemerID;
+        CustomerInfo customerInfo = new CustomerInfo();
         public frmCheckout(List<OrderDetails> cartItems, string custemerID)
         {
             InitializeComponent();
@@ -70,7 +70,7 @@ namespace CoffeeShopManagement
             }
             context.SubmitChanges();
 
-            CustomerInfo customerInfo = new CustomerInfo();
+            
             customerInfo.HandlePaymnent(CalculateTotal());
 
             btnconfirm.Text = "Thanh toán thành công";
@@ -169,19 +169,16 @@ namespace CoffeeShopManagement
         private void btnSendFeedback_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show("Cảm ơn quý khách", "Thông báo", MessageBoxButtons.OK);
+            customerInfo.FeedBack(currentRating, txtFeedback);
             btnSendFeedback.Enabled = false;
-
             Star1.Enabled = false;
             Star2.Enabled = false;
             Star3.Enabled = false;
             Star4.Enabled = false;
             Star5.Enabled = false;
-
             txtFeedback.Enabled = false;
 
         }
-
 
 
     }

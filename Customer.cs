@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Forms;
 
@@ -36,6 +37,12 @@ namespace CoffeeShopManagement
         public void HandlePaymnent(decimal money)
         {
             MessageBox.Show($"Số tiền đã thanh toán: {money.ToString("N0")} VND", "THANH TOÁN");
+        }
+
+        public void FeedBack( int star, TextBox textBox)
+        {
+            string res = $"Đánh giá {star} sao  \nLời nhắn: {textBox.Text}";
+            MessageBox.Show(res, "FEEDBACK");
         }
     }
 }

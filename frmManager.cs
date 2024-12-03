@@ -82,7 +82,6 @@ namespace CoffeeShopManagement
             btnCustomer.FillColor = Color.White;
             pnMain.Controls.Clear();
             frmCustomerList frm = new frmCustomerList();
-            frm.Dock = DockStyle.Fill;
             pnMain.Controls.Add(frm);
         }
 
@@ -112,7 +111,10 @@ namespace CoffeeShopManagement
             ReserColor();
             btnReport.ForeColor = ColorTranslator.FromHtml("#5E94FF");
             btnReport.FillColor = Color.White;
-
+            pnMain.Controls.Clear();
+            frmReportSales frm = new frmReportSales();
+            frm.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(frm);
 
             ///
         }

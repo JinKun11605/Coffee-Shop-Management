@@ -13,7 +13,7 @@ namespace CoffeeShopManagement
     public partial class frmManagerDashBoard : UserControl
     {
         CoffeeShopDBDataContext context = new CoffeeShopDBDataContext();
-
+        
         public frmManagerDashBoard()
         {
             InitializeComponent();
@@ -50,6 +50,22 @@ namespace CoffeeShopManagement
             lbltotalBar.Text = TotalBaristas().ToString();
             lblTodayIncome.Text = IncomeToday().ToString("N0") + " VND";
             lblTotalIncome.Text = TotalIncome().ToString("N0") + " VND";
+        }
+
+        private void btnCoffeeInfo_Click(object sender, EventArgs e)
+        {
+            var coffees = context.Products.ToList();
+
+            string result = "";
+
+            foreach (var coffee in coffees)
+            {
+                Coffee drink = new Coffee(coffee.ProductID, coffee.ProductName, coffee.Size, coffee.Price, coffee.Quantity);
+                result += drink;
+                result += "\n";
+            }
+
+            lblCoffeeInfo.Text = result;
         }
     }
 }

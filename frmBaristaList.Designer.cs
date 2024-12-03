@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle89 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle90 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle94 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle95 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle96 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvBarista = new System.Windows.Forms.DataGridView();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,8 +92,8 @@
             this.YoE,
             this.ID,
             this.Password});
-            this.dgvBarista.Location = new System.Drawing.Point(85, 524);
-            this.dgvBarista.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.dgvBarista.Location = new System.Drawing.Point(92, 537);
+            this.dgvBarista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvBarista.Name = "dgvBarista";
             this.dgvBarista.RowHeadersWidth = 51;
             this.dgvBarista.Size = new System.Drawing.Size(1070, 245);
@@ -103,8 +103,8 @@
             // FullName
             // 
             this.FullName.DataPropertyName = "FullName";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FullName.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle89.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FullName.DefaultCellStyle = dataGridViewCellStyle89;
             this.FullName.HeaderText = "Họ và tên";
             this.FullName.MinimumWidth = 6;
             this.FullName.Name = "FullName";
@@ -113,8 +113,8 @@
             // BirthDay
             // 
             this.BirthDay.DataPropertyName = "BirthDay";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.BirthDay.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.BirthDay.DefaultCellStyle = dataGridViewCellStyle90;
             this.BirthDay.HeaderText = "Ngày sinh";
             this.BirthDay.MinimumWidth = 6;
             this.BirthDay.Name = "BirthDay";
@@ -123,9 +123,9 @@
             // HireDay
             // 
             this.HireDay.DataPropertyName = "HireDay";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Format = "dd/MM/yyyy";
-            this.HireDay.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle91.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle91.Format = "dd/MM/yyyy";
+            this.HireDay.DefaultCellStyle = dataGridViewCellStyle91;
             this.HireDay.HeaderText = "Ngày thuê";
             this.HireDay.MinimumWidth = 6;
             this.HireDay.Name = "HireDay";
@@ -134,8 +134,8 @@
             // PhoneNumber
             // 
             this.PhoneNumber.DataPropertyName = "PhoneNumber";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.PhoneNumber.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.PhoneNumber.DefaultCellStyle = dataGridViewCellStyle92;
             this.PhoneNumber.HeaderText = "Số điện thoại";
             this.PhoneNumber.MinimumWidth = 6;
             this.PhoneNumber.Name = "PhoneNumber";
@@ -144,8 +144,8 @@
             // Salary
             // 
             this.Salary.DataPropertyName = "Salary";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Salary.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle93.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Salary.DefaultCellStyle = dataGridViewCellStyle93;
             this.Salary.HeaderText = "Lương";
             this.Salary.MinimumWidth = 6;
             this.Salary.Name = "Salary";
@@ -154,8 +154,8 @@
             // YoE
             // 
             this.YoE.DataPropertyName = "YoE";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.YoE.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.YoE.DefaultCellStyle = dataGridViewCellStyle94;
             this.YoE.HeaderText = "Kinh nghiệm";
             this.YoE.MinimumWidth = 6;
             this.YoE.Name = "YoE";
@@ -164,8 +164,8 @@
             // ID
             // 
             this.ID.DataPropertyName = "ID";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle95;
             this.ID.HeaderText = "Tài khoản";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
@@ -174,8 +174,8 @@
             // Password
             // 
             this.Password.DataPropertyName = "Password";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Password.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle96.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Password.DefaultCellStyle = dataGridViewCellStyle96;
             this.Password.HeaderText = "Mật khẩu";
             this.Password.MinimumWidth = 6;
             this.Password.Name = "Password";
@@ -195,11 +195,11 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(335, 33);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox1.Location = new System.Drawing.Point(341, 45);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox1.Size = new System.Drawing.Size(309, 309);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(342, 309);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "THÔNG TIN NHÂN VIÊN PHA CHẾ";
@@ -208,7 +208,7 @@
             // 
             this.dtpHireDay.CustomFormat = "dd/MM/yyyy";
             this.dtpHireDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHireDay.Location = new System.Drawing.Point(190, 123);
+            this.dtpHireDay.Location = new System.Drawing.Point(190, 122);
             this.dtpHireDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpHireDay.Name = "dtpHireDay";
             this.dtpHireDay.ShowUpDown = true;
@@ -257,7 +257,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 227);
+            this.label2.Location = new System.Drawing.Point(42, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 20;
@@ -273,7 +273,7 @@
             // 
             // txtYoE
             // 
-            this.txtYoE.Location = new System.Drawing.Point(190, 267);
+            this.txtYoE.Location = new System.Drawing.Point(190, 268);
             this.txtYoE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtYoE.Name = "txtYoE";
             this.txtYoE.Size = new System.Drawing.Size(100, 26);
@@ -281,7 +281,7 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(190, 177);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(190, 178);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(100, 26);
@@ -290,7 +290,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(42, 273);
+            this.label8.Location = new System.Drawing.Point(42, 272);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 20);
             this.label8.TabIndex = 13;
@@ -354,7 +354,7 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtPassword);
-            this.groupBox2.Location = new System.Drawing.Point(750, 51);
+            this.groupBox2.Location = new System.Drawing.Point(756, 64);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -366,7 +366,7 @@
             // btnSearchByID
             // 
             this.btnSearchByID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchByID.Location = new System.Drawing.Point(818, 388);
+            this.btnSearchByID.Location = new System.Drawing.Point(824, 401);
             this.btnSearchByID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchByID.Name = "btnSearchByID";
             this.btnSearchByID.Size = new System.Drawing.Size(123, 28);
@@ -377,10 +377,10 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(750, 286);
+            this.btnAdd.Location = new System.Drawing.Point(756, 299);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(139, 50);
+            this.btnAdd.Size = new System.Drawing.Size(140, 50);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "THÊM";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -388,7 +388,7 @@
             // 
             // btnAddPicture
             // 
-            this.btnAddPicture.Location = new System.Drawing.Point(85, 275);
+            this.btnAddPicture.Location = new System.Drawing.Point(92, 288);
             this.btnAddPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddPicture.Name = "btnAddPicture";
             this.btnAddPicture.Size = new System.Drawing.Size(102, 24);
@@ -414,7 +414,7 @@
             "Số điện thoại",
             "Lương",
             "Kinh nghiệm"});
-            this.cbSort.Location = new System.Drawing.Point(304, 388);
+            this.cbSort.Location = new System.Drawing.Point(310, 401);
             this.cbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSort.Name = "cbSort";
             this.cbSort.Size = new System.Drawing.Size(121, 28);
@@ -424,7 +424,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(222, 391);
+            this.label9.Location = new System.Drawing.Point(228, 404);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 20);
             this.label9.TabIndex = 24;
@@ -432,14 +432,16 @@
             // 
             // txtSearchByID
             // 
-            this.txtSearchByID.Location = new System.Drawing.Point(963, 391);
+            this.txtSearchByID.Location = new System.Drawing.Point(969, 404);
+            this.txtSearchByID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearchByID.Name = "txtSearchByID";
             this.txtSearchByID.Size = new System.Drawing.Size(121, 26);
             this.txtSearchByID.TabIndex = 25;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(474, 388);
+            this.btnEdit.Location = new System.Drawing.Point(480, 401);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(116, 28);
             this.btnEdit.TabIndex = 26;
@@ -449,7 +451,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(646, 388);
+            this.btnDelete.Location = new System.Drawing.Point(652, 401);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(116, 28);
             this.btnDelete.TabIndex = 27;
@@ -459,7 +462,7 @@
             // 
             // pictureBarista
             // 
-            this.pictureBarista.Location = new System.Drawing.Point(72, 58);
+            this.pictureBarista.Location = new System.Drawing.Point(78, 71);
             this.pictureBarista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBarista.Name = "pictureBarista";
             this.pictureBarista.Size = new System.Drawing.Size(142, 185);
@@ -484,9 +487,9 @@
             this.Controls.Add(this.dgvBarista);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBaristaList";
-            this.Size = new System.Drawing.Size(1550, 688);
+            this.Size = new System.Drawing.Size(1252, 831);
             this.Load += new System.EventHandler(this.frmBaristaList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarista)).EndInit();
             this.groupBox1.ResumeLayout(false);

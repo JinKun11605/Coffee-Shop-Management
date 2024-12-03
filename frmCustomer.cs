@@ -17,6 +17,10 @@ namespace CoffeeShopManagement
         {
             InitializeComponent();
             customerID = CustomerID;
+            if (customerID == "GUEST")
+            {
+                btnInfo.Visible = false ;
+            }
         }
 
         private void btnBuy_Click(object sender, EventArgs e)

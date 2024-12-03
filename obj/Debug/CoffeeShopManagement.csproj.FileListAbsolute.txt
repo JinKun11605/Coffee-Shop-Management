@@ -146,3 +146,4 @@ C:\Users\Admin\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.exe
 C:\Users\Admin\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.pdb
 S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.frmBarista.resources
 S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.frmCustomer.resources
+S:\OOP\Coffee-Shop-Management\obj\Debug\CoffeeShopManagement.frmReportSales.resources

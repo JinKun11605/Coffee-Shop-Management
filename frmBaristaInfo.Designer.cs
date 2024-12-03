@@ -44,11 +44,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.lblShowID = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.lblShowPassword = new System.Windows.Forms.Label();
             this.pictureManager = new System.Windows.Forms.PictureBox();
-            this.btnBartending = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureManager)).BeginInit();
@@ -196,7 +194,6 @@
             // 
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.lblShowID);
-            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.lblShowPassword);
             this.groupBox1.Location = new System.Drawing.Point(719, 153);
@@ -223,16 +220,6 @@
             this.lblShowID.Size = new System.Drawing.Size(62, 20);
             this.lblShowID.TabIndex = 19;
             this.lblShowID.Text = "label15";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(52, 168);
-            this.button4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(126, 32);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Đổi mật khẩu";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -262,21 +249,10 @@
             this.pictureManager.TabIndex = 22;
             this.pictureManager.TabStop = false;
             // 
-            // btnBartending
-            // 
-            this.btnBartending.Location = new System.Drawing.Point(448, 483);
-            this.btnBartending.Name = "btnBartending";
-            this.btnBartending.Size = new System.Drawing.Size(146, 45);
-            this.btnBartending.TabIndex = 24;
-            this.btnBartending.Text = "Pha chế";
-            this.btnBartending.UseVisualStyleBackColor = true;
-            this.btnBartending.Click += new System.EventHandler(this.btnBartending_Click);
-            // 
             // frmBaristaInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnBartending);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureManager);
@@ -312,10 +288,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblShowID;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblShowPassword;
         private System.Windows.Forms.PictureBox pictureManager;
-        private System.Windows.Forms.Button btnBartending;
     }
 }

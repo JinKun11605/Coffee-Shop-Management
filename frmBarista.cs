@@ -34,13 +34,6 @@ namespace CoffeeShopManagement
             frmBaristaMixing frm = new frmBaristaMixing(baristaID);
             pnMain.Controls.Add(frm);
         }
-
-
-
-
-
-
-
         private void imgLogin_Click(object sender, EventArgs e)
         {
             frmLogin frmLogin = new frmLogin();
